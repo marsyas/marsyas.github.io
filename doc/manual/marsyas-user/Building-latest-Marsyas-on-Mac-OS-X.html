@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Building latest Marsyas on Mac OS X</title>
+
+<meta name="description" content="Marsyas User Manual: Building latest Marsyas on Mac OS X">
+<meta name="keywords" content="Marsyas User Manual: Building latest Marsyas on Mac OS X">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" rel="up" title="Step-by-step building instructions">
+<link href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" rel="next" title="Building latest Marsyas on Windows">
+<link href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Building-latest-Marsyas-on-Debian_002fUbuntu" rel="prev" title="Building latest Marsyas on Debian/Ubuntu">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Building-latest-Marsyas-on-Mac-OS-X"></a>
+<div class="header">
+<p>
+Next: <a href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" accesskey="n" rel="next">Building latest Marsyas on Windows</a>, Previous: <a href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Building-latest-Marsyas-on-Debian_002fUbuntu" accesskey="p" rel="prev">Building latest Marsyas on Debian/Ubuntu</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Building-latest-Marsyas-on-Mac-OS-X-1"></a>
+<h4 class="subsection">2.2.2 Building latest Marsyas on Mac OS X</h4>
+
+<p>These instructions are for building the latest development version of Marsyas.
+It is assumed that you have already obtained the source code.
+If not, please consult <a href="Get-Marsyas-sources.html#Get-Marsyas-sources">Get Marsyas sources</a> for instructions.
+</p>
+
+<a name="Install-prerequisits-1"></a>
+<h4 class="subsubsection">2.2.2.1 Install prerequisits</h4>
+
+<ul>
+<li> CMake
+
+<p>Marsyas uses CMake to configure and guide its building process.
+</p>
+<p>Download CMake from the following link and install it:
+<a href="http://www.cmake.org/cmake/resources/software.html">http://www.cmake.org/cmake/resources/software.html</a>
+</p>
+<p>At some point in installation you may be asked whether you want to install
+links to CMake to system locations - choose &quot;yes&quot;: this will allow you to run
+CMake from the Terminal.
+</p>
+</li><li> Xcode
+
+<p>Xcode development environment provides the Clang compiler required to compile
+Marsyas. If you want to use all Marsyas features, you need a compiler with
+a decent C++11 support. Hence, please install the latest Xcode version from
+Apple:
+<a href="https://developer.apple.com/xcode/">https://developer.apple.com/xcode/</a>
+</p>
+<p>Just as with CMake above, confirm installation of compilation tools to
+system locations, so as to make them available for use in the Terminal.
+</p>
+</li></ul>
+
+
+
+<a name="Configure-Marsyas-using-CMake-1"></a>
+<h4 class="subsubsection">2.2.2.2 Configure Marsyas using CMake</h4>
+
+<ol>
+<li> Start up the Terminal application.
+
+</li><li> Navigate to the top-level directory of Marsyas sources. For example:
+
+<div class="example">
+<pre class="example">cd ~/marsyas
+</pre></div>
+
+</li><li> Create a build directory within, which will contain configuration
+options and compiled Marsyas libraries and programs. Navigate to the build
+directory:
+
+<div class="example">
+<pre class="example">mkdir build
+cd build
+</pre></div>
+
+</li><li> Run CMake, passing it the Marsyas source directory as argument:
+
+<div class="example">
+<pre class="example">cmake ..
+</pre></div>
+
+</li></ol>
+
+<p>CMake should now have generated a number of new files in the build directory,
+including a file named &quot;Makefile&quot; which allows you to compile Marsyas.
+</p>
+<p>If you would like to use CMake options to enable and disable specific features,
+please see instructions in <a href="Configuring-with-CMake.html#Configuring-with-CMake">Configuring with CMake</a>.
+</p>
+
+<a name="Compile-Marsyas-using-_0027make_0027-1"></a>
+<h4 class="subsubsection">2.2.2.3 Compile Marsyas using &rsquo;make&rsquo;</h4>
+
+<p>Still in the build directory, use the &rsquo;make&rsquo; command to compile Marsyas.
+</p>
+<div class="example">
+<pre class="example">make
+</pre></div>
+
+<p><em>Geeky note: If your CPU has multiple cores (it is capable of running
+multiple threads in parallel), you can shorten the compilation time by running
+several instances of &rsquo;make&rsquo; in parallel by using the &rsquo;-j&rsquo; option followed by
+the number of instances. The example below runs 3 parallel &rsquo;make&rsquo; instances:</em>
+</p>
+<div class="example">
+<pre class="example">make -j3
+</pre></div>
+
+<p>You could also compile Marsyas in Debug mode, which would help developers
+discover bugs in case you run into troubles when using Marsyas. However,
+Marsyas will run significantly slower when compiled in Debug mode.
+</p>
+<p>To compile in Debug mode, you need to first use &rsquo;cmake&rsquo; to change a CMake
+option named CMAKE_BUILD_TYPE, and then run &rsquo;make&rsquo;. Please mind the &quot;.&quot;
+at the end of the first command, to indicate the current directory:
+</p>
+<div class="example">
+<pre class="example">cmake -DCMAKE_BUILD_TYPE=Debug .
+make -j3
+</pre></div>
+
+
+<a name="Marsyas-usage-and-system_002dwide-installation-1"></a>
+<h4 class="subsubsection">2.2.2.4 Marsyas usage and system-wide installation</h4>
+
+<p>After compiling, you should have several Marsyas programs in the
+<code>build/bin</code> subdirectory and the Marsyas library in the <code>build/lib</code>
+subdirectory.
+</p>
+<p>For example, assuming that you are in the <code>build</code> directory, you can run
+the <code>sfplay</code> program to play an uncompressed sound file like this:
+</p><div class="example">
+<pre class="example">./bin/sfplay my_sound_file.wav
+</pre></div>
+
+<p>If you want to make the programs and the library available outside of your
+build directory, you should use the following command to install all parts
+of Marsyas to appropriate system locations:
+</p>
+<div class="example">
+<pre class="example">make install
+</pre></div>
+
+<p>By default, the above command will install programs and libraries under the
+<code>/usr/local</code> prefix. You can change that by setting the CMake option
+CMAKE_INSTALL_PREFIX to the desired prefix before installation:
+</p>
+<div class="example">
+<pre class="example">cmake -DCMAKE_INSTALL_PREFIX=~/marsyas-install .
+make install
+</pre></div>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" accesskey="n" rel="next">Building latest Marsyas on Windows</a>, Previous: <a href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Building-latest-Marsyas-on-Debian_002fUbuntu" accesskey="p" rel="prev">Building latest Marsyas on Debian/Ubuntu</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Command-line options</title>
+
+<meta name="description" content="Marsyas User Manual: Command-line options">
+<meta name="keywords" content="Marsyas User Manual: Command-line options">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Example-programs.html#Example-programs" rel="up" title="Example programs">
+<link href="Writing-Qt4-applications.html#Writing-Qt4-applications" rel="next" title="Writing Qt4 applications">
+<link href="Getting-data-from-the-network.html#Getting-data-from-the-network" rel="prev" title="Getting data from the network">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Command_002dline-options"></a>
+<div class="header">
+<p>
+Previous: <a href="Getting-data-from-the-network.html#Getting-data-from-the-network" accesskey="p" rel="prev">Getting data from the network</a>, Up: <a href="Example-programs.html#Example-programs" accesskey="u" rel="up">Example programs</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Command_002dline-options-1"></a>
+<h4 class="subsection">9.2.5 Command-line options</h4>
+
+<p>Getting options from the command-line is fairly easy; Marsyas provides
+a handy object which parses the command-line for you.
+</p>
+<pre class="verbatim">&lt;!-- Generator: GNU source-highlight 2.4
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite --&gt;
+&lt;pre&gt;&lt;tt&gt;&lt;b&gt;&lt;font color=&quot;#000080&quot;&gt;#include&lt;/font&gt;&lt;/b&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;CommandLineOptions.h&quot;&lt;/font&gt;
+
+&lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;using&lt;/font&gt;&lt;/b&gt; &lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;namespace&lt;/font&gt;&lt;/b&gt; std&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+&lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;using&lt;/font&gt;&lt;/b&gt; &lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;namespace&lt;/font&gt;&lt;/b&gt; Marsyas&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+
+CommandLineOptions cmd_options&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;int&lt;/font&gt; helpOpt&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+&lt;font color=&quot;#009900&quot;&gt;int&lt;/font&gt; usageOpt&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+mrs_natural naturalOpt&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+mrs_real realOpt&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+mrs_string stringOpt&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;void&lt;/font&gt;
+&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;printUsage&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;()&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;MRSDIAG&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;commandOptions.cpp - printUsage&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;Usage: commandOptions &quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;file1 file2 file3&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;where file1, ..., fileN are sound files in a MARSYAS supported format&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;exit&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#993399&quot;&gt;1&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;void&lt;/font&gt;
+&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;printHelp&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;()&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;MRSDIAG&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;commandOptions.cpp - printHelp&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;commandOptions: Sample Program&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;------------------------------&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;Usage: commandOptions file1 file2 file3&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;where file1, ..., fileN are sound files in a Marsyas supported format&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;Help Options:&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;-u --usage		 : display short usage info&quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;-h --help		 : display this information &quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;-n --natural		 : sets a `natural' variable &quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;-r --real		 : sets a `real' variable &quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cerr &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;-s --string		 : sets a `string' variable &quot;&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt; endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;exit&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#993399&quot;&gt;1&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;void&lt;/font&gt;
+&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;initOptions&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;()&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;addBoolOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;help&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;h&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;false&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;addBoolOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;usage&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;u&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;false&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;addNaturalOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;natural&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;n&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#993399&quot;&gt;9&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;addRealOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;real&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;r&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#993399&quot;&gt;3.1415927&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;addStringOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;string&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;s&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;font color=&quot;#FF0000&quot;&gt;&quot;hello world&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;void&lt;/font&gt;
+&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;loadOptions&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;()&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	helpOpt &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getBoolOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;help&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	usageOpt &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getBoolOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;usage&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	naturalOpt &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getNaturalOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;natural&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	realOpt &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getRealOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;real&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	stringOpt &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getStringOption&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;string&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+
+
+&lt;font color=&quot;#009900&quot;&gt;void&lt;/font&gt; &lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;doStuff&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;string printMe&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;printMe&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+&lt;font color=&quot;#009900&quot;&gt;int&lt;/font&gt; &lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;main&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;&lt;font color=&quot;#009900&quot;&gt;int&lt;/font&gt; argc&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt; &lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;const&lt;/font&gt;&lt;/b&gt; &lt;font color=&quot;#009900&quot;&gt;char&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;**&lt;/font&gt;argv&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;initOptions&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt;
+	cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;readOptions&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;argc&lt;font color=&quot;#990000&quot;&gt;,&lt;/font&gt;argv&lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;loadOptions&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt;
+
+	vector&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&lt;/font&gt;string&lt;font color=&quot;#990000&quot;&gt;&amp;gt;&lt;/font&gt; soundfiles &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; cmd_options&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;getRemaining&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt;
+
+	&lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;if&lt;/font&gt;&lt;/b&gt; &lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;helpOpt&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt;
+		&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;printHelp&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt;
+
+	&lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;if&lt;/font&gt;&lt;/b&gt; &lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;usageOpt&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;||&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;argc&lt;font color=&quot;#990000&quot;&gt;==&lt;/font&gt;&lt;font color=&quot;#993399&quot;&gt;1&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt;
+		&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;printUsage&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt;
+
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;Command-line options were:&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;		--natural: &quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;naturalOpt&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;		--real: &quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;realOpt&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;		--string: &quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;stringOpt&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;(these may simply be the default values)&quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	cout&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;&lt;font color=&quot;#FF0000&quot;&gt;&quot;The rest of the command-line arguments were: &quot;&lt;/font&gt;&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&amp;lt;&lt;/font&gt;endl&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+
+	vector&lt;font color=&quot;#990000&quot;&gt;&amp;lt;&lt;/font&gt;string&lt;font color=&quot;#990000&quot;&gt;&amp;gt;::&lt;/font&gt;iterator sfi&lt;font color=&quot;#990000&quot;&gt;;&lt;/font&gt;
+	&lt;b&gt;&lt;font color=&quot;#0000FF&quot;&gt;for&lt;/font&gt;&lt;/b&gt; &lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt;sfi &lt;font color=&quot;#990000&quot;&gt;=&lt;/font&gt; soundfiles&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;begin&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt; sfi &lt;font color=&quot;#990000&quot;&gt;!=&lt;/font&gt; soundfiles&lt;font color=&quot;#990000&quot;&gt;.&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;end&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;();&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;++&lt;/font&gt;sfi&lt;font color=&quot;#990000&quot;&gt;)&lt;/font&gt;
+	&lt;font color=&quot;#FF0000&quot;&gt;{&lt;/font&gt;
+		&lt;b&gt;&lt;font color=&quot;#000000&quot;&gt;doStuff&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#990000&quot;&gt;(&lt;/font&gt; &lt;font color=&quot;#990000&quot;&gt;*&lt;/font&gt;sfi &lt;font color=&quot;#990000&quot;&gt;);&lt;/font&gt;
+	&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+&lt;font color=&quot;#FF0000&quot;&gt;}&lt;/font&gt;
+
+&lt;/tt&gt;&lt;/pre&gt;
+</pre>
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="Getting-data-from-the-network.html#Getting-data-from-the-network" accesskey="p" rel="prev">Getting data from the network</a>, Up: <a href="Example-programs.html#Example-programs" accesskey="u" rel="up">Example programs</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Compiling on Ubuntu 11.04 - Natty Narwhal (2011)</title>
+
+<meta name="description" content="Marsyas User Manual: Compiling on Ubuntu 11.04 - Natty Narwhal (2011)">
+<meta name="keywords" content="Marsyas User Manual: Compiling on Ubuntu 11.04 - Natty Narwhal (2011)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" rel="up" title="Step-by-step building instructions">
+<link href="Compiling-on-Ubuntu.html#Compiling-on-Ubuntu" rel="next" title="Compiling on Ubuntu">
+<link href="Compiling-on-MacOS-X-10_002e6-Snow-Leopard.html#Compiling-on-MacOS-X-10_002e6-Snow-Leopard" rel="prev" title="Compiling on MacOS X 10.6 Snow Leopard">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029"></a>
+<div class="header">
+<p>
+Next: <a href="Compiling-on-Ubuntu.html#Compiling-on-Ubuntu" accesskey="n" rel="next">Compiling on Ubuntu</a>, Previous: <a href="Compiling-on-MacOS-X-10_002e6-Snow-Leopard.html#Compiling-on-MacOS-X-10_002e6-Snow-Leopard" accesskey="p" rel="prev">Compiling on MacOS X 10.6 Snow Leopard</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029-1"></a>
+<h4 class="subsection">2.2.5 Compiling on Ubuntu 11.04 - Natty Narwhal (2011)</h4>
+
+
+<p>These steps were used to install in a fresh install of Ubuntu (11.04 -
+Natty Narwhal - 32 bits) on September 2011. All the command were typed
+in a terminal but it should be straightforward to use the synaptic
+package manager instead of apt-get.  The text in parentheses after each
+command is a simple explanation and should not be typed in the
+terminal.
+</p>
+
+<ol>
+<li> sudo apt-get install subversion  (install the subversion version control system)
+</li><li> svn co https://svn.code.sf.net/p/marsyas/code/trunk my-marsyas-dir
+</li><li> cd marsyas
+</li><li> mkdir build
+</li><li> cd build
+</li><li> sudo apt-get install cmake    (the regular cmake)
+</li><li> sudo apt-get install cmake-curses-gui  (the curses gui invoked by ccmake)
+</li><li> sudo apt-get install libasound2-dev (alsa development library and
+headers)
+</li><li> ccmake ../src
+</li><li> Press [c] to configure and [g] to generate the Makefile and exit
+</li><li> make (or make -j k where k is the number of cores of your computer
++ 1)
+</li><li> cd bin
+</li><li> ./helloWorld (you should hear a sine wave played)
+</li></ol>
+
+<p>Additional instructions for creating the Marsyas python bindings through
+Swig as well as installing matplotlib.
+</p>
+
+<ol>
+<li> sudo apt-get install swig  (the swig interface generator for the
+Python bindings)
+</li><li> sudo apt-get install python-dev (the header files for Python)
+</li><li> sudo apt-get install python-matplotlib (the matlab-like plotting
+capabilities for Python)
+</li><li> sudo apt-get install ipython
+</li><li> cd ..
+</li><li> ccmake ../src
+</li><li> enable the WITH_SWIG option
+</li><li> make
+</li><li> sudo ldconfig /usr/local/lib (add /usr/local/lib to the location
+searched for libraries)
+</li><li> sudo make install (install the Marsyas python bindings)
+</li></ol>
+
+<p>Now you are ready to test that everything works:
+</p><ol>
+<li> python windowing.py
+</li><li> ipython &ndash;pylab windowing.py
+</li></ol>
+
+<p>You should see a plot that has been created by passing data through a
+Marsyas processing network. Congratulations - you now can work
+with Marsyas and matplotlib a powerful combo.
+</p>
+<p>If you decide to add PNG support you need the following additional
+steps:
+</p>
+<ol>
+<li> sudo apt-get install libfreetype6-dev
+</li><li> enable the WITH_PNG option
+</li><li> make
+</li><li> sudo make install
+</li></ol>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Compiling-on-Ubuntu.html#Compiling-on-Ubuntu" accesskey="n" rel="next">Compiling on Ubuntu</a>, Previous: <a href="Compiling-on-MacOS-X-10_002e6-Snow-Leopard.html#Compiling-on-MacOS-X-10_002e6-Snow-Leopard" accesskey="p" rel="prev">Compiling on MacOS X 10.6 Snow Leopard</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

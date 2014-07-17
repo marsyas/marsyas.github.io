@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: MATLAB</title>
+
+<meta name="description" content="Marsyas User Manual: MATLAB">
+<meta name="keywords" content="Marsyas User Manual: MATLAB">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Interoperability.html#Interoperability" rel="up" title="Interoperability">
+<link href="Python.html#Python" rel="next" title="Python">
+<link href="WEKA.html#WEKA" rel="prev" title="WEKA">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="MATLAB"></a>
+<div class="header">
+<p>
+Next: <a href="Python.html#Python" accesskey="n" rel="next">Python</a>, Previous: <a href="WEKA.html#WEKA" accesskey="p" rel="prev">WEKA</a>, Up: <a href="Interoperability.html#Interoperability" accesskey="u" rel="up">Interoperability</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="MATLAB-1"></a>
+<h4 class="subsection">9.5.3 MATLAB</h4>
+
+<p>MATLAB is a high-level technical computing language and interactive
+environment for algorithm development, data visualization, data
+analysis, and numeric computation <a href="http://www.mathworks.com/">http://www.mathworks.com/</a>
+</p>
+<p>Marsyas supports the use of the MATLAB engine API for exchanging data at
+runtime between Marsyas C++ code and MATLAB enviroment. This allows
+effortlessly passing and getting data to/from MATLAB inside Marsyas, and
+have access to MATLAB plotting facilities, numerical routines,
+toolboxes, etc.  More information about the MATLAB engine can be found
+at
+<a href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab_external/f39903.html">in their technical documentation</a>.
+</p>
+<a name="Passing-data-from-Marsyas-to-MATLAB-_003d_003e-MATLAB_005fPUT_0028_0029"></a>
+<h4 class="subheading">Passing data from Marsyas to MATLAB =&gt; MATLAB_PUT()</h4>
+
+<p>To export data from Marsyas into MATLAB, simply use the macro
+<code>MATLAB_PUT(marsyasVar, MATLABvarName)</code>.
+</p>
+<p>MATLAB_PUT() can be used with C++ int, float, double, mrs_real,
+mrs_natural, mrs_complex, std::string, std::vector, Marsyas::realvec,
+among other data types. For a complete list of the types supported,
+please refer to <samp>src/marsyas/MATLAB/MATLABengine.h</samp>.
+</p>
+<div class="example">
+<pre class="example">//create a Marsyas realvec (i.e. a 2 by 3 matrix):
+realvec marsyas_realvec(2,3);
+marsyas_realvec(0,0) = 0.0;
+marsyas_realvec(0,1) = 0.1;
+marsyas_realvec(0,2) = 0.2;
+marsyas_realvec(1,0) = 1.0;
+marsyas_realvec(1,1) = 1.1;
+marsyas_realvec(1,2) = 1.2;
+
+// Send the realvec to MATLAB, and call it marsyasMatrix in MATLAB
+MATLAB_PUT(marsyas_realvec,&quot;marsyasMatrix&quot;);
+// marsyasMatrix is now a normal matrix of doubles in MATLAB
+// environment, which can be used as any regular MATLAB matrix.
+</pre></div>
+
+<p>Please refer to <samp>src/apps/mudbox/mudbox.cpp</samp> for more examples of
+using the MATLAB engine API in Marsyas (look for the
+toy_with_MATLABengine() function).
+</p>
+<a name="Executing-commands-in-MATLAB-from-Marsyas-C_002b_002b-code-_003d_003e-MATLAB_005fEVAL_0028_0029"></a>
+<h4 class="subheading">Executing commands in MATLAB from Marsyas C++ code =&gt; MATLAB_EVAL()</h4>
+
+<p>It is possible to execute commands in MATLAB from Marsyas C++ code, as
+if they were being input into the MATLAB command line. For this use the
+macro <code>MATLAB_EVAL(command)</code>.
+</p>
+<div class="example">
+<pre class="example">//create a Marsyas realvec (i.e. a 2 by 3 matrix):
+realvec marsyas_realvec(2,3);
+marsyas_realvec(0,0) = 0.0;
+marsyas_realvec(0,1) = 0.1;
+marsyas_realvec(0,2) = 0.2;
+marsyas_realvec(1,0) = 1.0;
+marsyas_realvec(1,1) = 1.1;
+marsyas_realvec(1,2) = 1.2;
+
+// Send the realvec to MATLAB, and call it marsyasMatrix in MATLAB
+MATLAB_PUT(marsyas_realvec,&quot;marsyasMatrix&quot;);
+
+// now we can, for e.g., ask MATLAB to transpose the passed matrix...
+MATLAB_EVAL(&quot;marsyasMatrix = marsyasMatrix'&quot;);
+// and, why not, plot the matrix...
+MATLAB_EVAL(&quot;imagesc(marsyasMatrix)&quot;);
+// run our own m.files...
+MATLAB_EVAL(&quot;myFunction(marsyasMatrix);&quot;);
+// or execute any other MATLAB command!
+MATLAB_EVAL(&quot;whos&quot;);
+// Pretty cool, hum? ;-)
+</pre></div>
+
+<p>Please refer to src/apps/mudbox/mudbox.cpp for more examples of using
+the MATLAB engine API in Marsyas (look for the toy_with_MATLABengine()
+function).
+</p>
+<a name="Getting-data-from-MATLAB-into-Marsyas-_003d_003e-MATLAB_005fGET_0028_0029"></a>
+<h4 class="subheading">Getting data from MATLAB into Marsyas =&gt; MATLAB_GET()</h4>
+
+<p>To import data into Marsyas from MATLAB, simply use the macro
+<code>MATLAB_GET(MATLABvarName, marsyasVar);</code>
+</p>
+<p>MATLAB_GET() can be used for getting data from MATLAB into C++ int,
+float, double, mrs_real, mrs_natural, mrs_complex, std::vector,
+Marsyas::realvec, among other data types. For a complete list of the
+types supported, please refer to src/marsyas/MATLAB/MATLABengine.h. 
+</p>
+<div class="example">
+<pre class="example">//create a Marsyas realvec (i.e. a 2 by 2 matrix):
+realvec marsyas_realvec(2,2);
+marsyas_realvec(0,0) = 0.0;
+marsyas_realvec(0,1) = 0.1;
+marsyas_realvec(1,0) = 1.0;
+marsyas_realvec(1,1) = 1.1;
+
+// Send the realvec to MATLAB, and call it marsyasMatrix in MATLAB
+MATLAB_PUT(marsyas_realvec,&quot;marsyasMatrix&quot;);
+
+// now we can, for e.g., ask MATLAB to transpose the passed matrix...
+MATLAB_EVAL(&quot;marsyasMatrix = marsyasMatrix'&quot;);
+// and calculate its determinant
+MATLAB_EVAL(&quot;matrixDet = det(marsyasMatrix);&quot;);
+
+// we can now get the determinant value back into Marsyas 
+// (note: Marsyas already has its own efficient C++ 
+// implementation for determinant calculation of realvecs!
+// This is just an example of what can be done with the Marsyas MATLAB engine.
+mrs_real det;
+MATLAB_GET(&quot;matrixDet&quot;, det);
+cout &lt;&lt; det &lt;&lt; endl;
+
+// but we can also get the (now transposed) matrix back into Marsyas:
+MATLAB_GET(&quot;marsyasMatrix&quot;, marsyas_realvec);
+cout &lt;&lt; marsyas_realvec &lt;&lt; endl;
+</pre></div>
+
+<p>Please refer to src/apps/mudbox/mudbox.cpp for more examples of using
+the MATLAB engine API in Marsyas (look for the toy_with_MATLABengine()
+function).
+</p>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Python.html#Python" accesskey="n" rel="next">Python</a>, Previous: <a href="WEKA.html#WEKA" accesskey="p" rel="prev">WEKA</a>, Up: <a href="Interoperability.html#Interoperability" accesskey="u" rel="up">Interoperability</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

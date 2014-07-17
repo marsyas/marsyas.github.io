@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: MarSystemQtWrapper</title>
+
+<meta name="description" content="Marsyas User Manual: MarSystemQtWrapper">
+<meta name="keywords" content="Marsyas User Manual: MarSystemQtWrapper">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Writing-Qt4-applications.html#Writing-Qt4-applications" rel="up" title="Writing Qt4 applications">
+<link href="Passing-controls-to-a-MarSystemQtWrapper.html#Passing-controls-to-a-MarSystemQtWrapper" rel="next" title="Passing controls to a MarSystemQtWrapper">
+<link href="Including-and-linking-to-libmarsyasqt.html#Including-and-linking-to-libmarsyasqt" rel="prev" title="Including and linking to libmarsyasqt">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="MarSystemQtWrapper"></a>
+<div class="header">
+<p>
+Next: <a href="Passing-controls-to-a-MarSystemQtWrapper.html#Passing-controls-to-a-MarSystemQtWrapper" accesskey="n" rel="next">Passing controls to a MarSystemQtWrapper</a>, Previous: <a href="Including-and-linking-to-libmarsyasqt.html#Including-and-linking-to-libmarsyasqt" accesskey="p" rel="prev">Including and linking to libmarsyasqt</a>, Up: <a href="Writing-Qt4-applications.html#Writing-Qt4-applications" accesskey="u" rel="up">Writing Qt4 applications</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="MarSystemQtWrapper-1"></a>
+<h4 class="subsection">9.3.2 MarSystemQtWrapper</h4>
+
+<p>The actual interaction between Qt and Marsyas is performed with a
+<code>MarSystemQtWrapper</code> object.  Add the following lines to your
+header file that deals with Marsyas:
+</p>
+<div class="example">
+<pre class="example">#include &quot;MarSystemQtWrapper.h&quot;
+using namespace MarsyasQt;
+</pre></div>
+
+<p>You may now create a pointer to a MarSystemQtWrapper in your object:
+</p>
+<div class="example">
+<pre class="example">MarSystemQtWrapper *mrsWrapper;
+</pre></div>
+
+<p>To use this object in your source file, create a MarSystem like normal,
+then pass it to a new <code>MarSystemQtWrapper</code> object:
+</p>
+<div class="example">
+<pre class="example">MarSystemManager mng;
+playbacknet = mng.create(&quot;Series&quot;, &quot;playbacknet&quot;);
+... set up playbacknet...
+
+// wrap it up to make it pretend to be a Qt object:
+mrsWrapper = new MarSystemQtWrapper(playbacknet);
+mrsWrapper-&gt;start();
+mrsWrapper-&gt;play();
+
+... do something for a while...
+mrsWrapper-&gt;stop();
+delete mrsWrapper;
+</pre></div>
+
+
+
+
+
+</body>
+</html>

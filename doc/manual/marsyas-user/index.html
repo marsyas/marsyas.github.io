@@ -1,0 +1,576 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Top</title>
+
+<meta name="description" content="Marsyas User Manual: Top">
+<meta name="keywords" content="Marsyas User Manual: Top">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="../dir/index.html" rel="up" title="(dir)">
+<link href="General-information.html#General-information" rel="next" title="General information">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<h1 class="settitle" align="center">Marsyas User Manual</h1>
+     
+
+
+     
+<a name="SEC_Contents"></a>
+<h2 class="contents-heading">Table of Contents</h2>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a name="toc-General-information-1" href="General-information.html#General-information">1 General information</a>
+  <ul class="no-bullet">
+    <li><a name="toc-History-1" href="History.html#History">1.1 History</a></li>
+    <li><a name="toc-Context-and-Related-Work-1" href="Context-and-Related-Work.html#Context-and-Related-Work">1.2 Context and Related Work</a></li>
+    <li><a name="toc-About-the-documentation-1" href="About-the-documentation.html#About-the-documentation">1.3 About the documentation</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Latest-version" href="About-the-documentation.html#Latest-version">1.3.1 Latest version</a></li>
+      <li><a name="toc-User-manual-and-Developer_0027s-manual" href="About-the-documentation.html#User-manual-and-Developer_0027s-manual">1.3.2 User manual and Developer&rsquo;s manual</a></li>
+      <li><a name="toc-Help-wanted_0021-1" href="About-the-documentation.html#Help-wanted_0021-1">1.3.3 Help wanted!</a></li>
+    </ul></li>
+    <li><a name="toc-Beyond-the-manuals-1" href="Beyond-the-manuals.html#Beyond-the-manuals">1.4 Beyond the manuals</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Examples" href="Beyond-the-manuals.html#Examples">1.4.1 Examples</a></li>
+      <li><a name="toc-MarSystem-source-documentation" href="Beyond-the-manuals.html#MarSystem-source-documentation">1.4.2 MarSystem source documentation</a></li>
+      <li><a name="toc-Source-code" href="Beyond-the-manuals.html#Source-code">1.4.3 Source code</a></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Source-installation-1" href="Source-installation.html#Source-installation">2 Source installation</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Get-Marsyas-sources-1" href="Get-Marsyas-sources.html#Get-Marsyas-sources">2.1 Get Marsyas sources</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Stable_0028_002dish_0029-Version" href="Get-Marsyas-sources.html#Stable_0028_002dish_0029-Version">Stable(-ish) Version</a></li>
+      <li><a name="toc-Development-Version" href="Get-Marsyas-sources.html#Development-Version">Development Version</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Read-access" href="Get-Marsyas-sources.html#Read-access">Read access</a></li>
+        <li><a name="toc-Write-access" href="Get-Marsyas-sources.html#Write-access">Write access</a></li>
+      </ul></li>
+    </ul></li>
+    <li><a name="toc-Step_002dby_002dstep-building-instructions-1" href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions">2.2 Step-by-step building instructions</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Building-latest-Marsyas-on-Debian_002fUbuntu-1" href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Building-latest-Marsyas-on-Debian_002fUbuntu">2.2.1 Building latest Marsyas on Debian/Ubuntu</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Install-prerequisits" href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Install-prerequisits">2.2.1.1 Install prerequisits</a></li>
+        <li><a name="toc-Configure-Marsyas-using-CMake" href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Configure-Marsyas-using-CMake">2.2.1.2 Configure Marsyas using CMake</a></li>
+        <li><a name="toc-Compile-Marsyas-using-_0027make_0027" href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Compile-Marsyas-using-_0027make_0027">2.2.1.3 Compile Marsyas using &rsquo;make&rsquo;</a></li>
+        <li><a name="toc-Marsyas-usage-and-system_002dwide-installation" href="Building-latest-Marsyas-on-Debian_002fUbuntu.html#Marsyas-usage-and-system_002dwide-installation">2.2.1.4 Marsyas usage and system-wide installation</a></li>
+      </ul></li>
+      <li><a name="toc-Building-latest-Marsyas-on-Mac-OS-X-1" href="Building-latest-Marsyas-on-Mac-OS-X.html#Building-latest-Marsyas-on-Mac-OS-X">2.2.2 Building latest Marsyas on Mac OS X</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Install-prerequisits-1" href="Building-latest-Marsyas-on-Mac-OS-X.html#Install-prerequisits-1">2.2.2.1 Install prerequisits</a></li>
+        <li><a name="toc-Configure-Marsyas-using-CMake-1" href="Building-latest-Marsyas-on-Mac-OS-X.html#Configure-Marsyas-using-CMake-1">2.2.2.2 Configure Marsyas using CMake</a></li>
+        <li><a name="toc-Compile-Marsyas-using-_0027make_0027-1" href="Building-latest-Marsyas-on-Mac-OS-X.html#Compile-Marsyas-using-_0027make_0027-1">2.2.2.3 Compile Marsyas using &rsquo;make&rsquo;</a></li>
+        <li><a name="toc-Marsyas-usage-and-system_002dwide-installation-1" href="Building-latest-Marsyas-on-Mac-OS-X.html#Marsyas-usage-and-system_002dwide-installation-1">2.2.2.4 Marsyas usage and system-wide installation</a></li>
+      </ul></li>
+      <li><a name="toc-Building-latest-Marsyas-on-Windows-1" href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows">2.2.3 Building latest Marsyas on Windows</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Install-prerequisits-2" href="Building-latest-Marsyas-on-Windows.html#Install-prerequisits-2">2.2.3.1 Install prerequisits</a></li>
+        <li><a name="toc-Choose-correct-Visual-Studio-Command-Prompt" href="Building-latest-Marsyas-on-Windows.html#Choose-correct-Visual-Studio-Command-Prompt">2.2.3.2 Choose correct Visual Studio Command Prompt</a></li>
+        <li><a name="toc-Configure-Marsyas-using-CMake-2" href="Building-latest-Marsyas-on-Windows.html#Configure-Marsyas-using-CMake-2">2.2.3.3 Configure Marsyas using CMake</a></li>
+        <li><a name="toc-Compile-Marsyas-using-Visual-Studio" href="Building-latest-Marsyas-on-Windows.html#Compile-Marsyas-using-Visual-Studio">2.2.3.4 Compile Marsyas using Visual Studio</a></li>
+      </ul></li>
+      <li><a name="toc-Compiling-on-MacOS-X-10_002e6-Snow-Leopard-1" href="Compiling-on-MacOS-X-10_002e6-Snow-Leopard.html#Compiling-on-MacOS-X-10_002e6-Snow-Leopard">2.2.4 Compiling on MacOS X 10.6 Snow Leopard</a></li>
+      <li><a name="toc-Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029-1" href="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029.html#Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029">2.2.5 Compiling on Ubuntu 11.04 - Natty Narwhal (2011)</a></li>
+      <li><a name="toc-Compiling-on-Ubuntu-1" href="Compiling-on-Ubuntu.html#Compiling-on-Ubuntu">2.2.6 Compiling on Ubuntu</a></li>
+      <li><a name="toc-Compiling-with-Visual-Studio-Express-2008-on-Windows-XP-1" href="Compiling-with-Visual-Studio-Express-2008-on-Windows-XP.html#Compiling-with-Visual-Studio-Express-2008-on-Windows-XP">2.2.7 Compiling with Visual Studio Express 2008 on Windows XP</a></li>
+      <li><a name="toc-Compiling-with-MinGW-on-Windows-XP-1" href="Compiling-with-MinGW-on-Windows-XP.html#Compiling-with-MinGW-on-Windows-XP">2.2.8 Compiling with MinGW on Windows XP</a></li>
+      <li><a name="toc-MacOS-X-additional-notes-1" href="MacOS-X-additional-notes.html#MacOS-X-additional-notes">2.2.9 MacOS X additional notes</a></li>
+    </ul></li>
+    <li><a name="toc-Configuring-with-CMake-1" href="Configuring-with-CMake.html#Configuring-with-CMake">2.3 Configuring with CMake</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Running-CMake" href="Configuring-with-CMake.html#Running-CMake">2.3.1 Running CMake</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Using-CMake-GUI" href="Configuring-with-CMake.html#Using-CMake-GUI">2.3.1.1 Using CMake GUI</a></li>
+        <li><a name="toc-Entirely-on-command_002dline" href="Configuring-with-CMake.html#Entirely-on-command_002dline">2.3.1.2 Entirely on command-line</a></li>
+        <li><a name="toc-More-alternatives" href="Configuring-with-CMake.html#More-alternatives">2.3.1.3 More alternatives</a></li>
+      </ul></li>
+      <li><a name="toc-Most-prominent-options" href="Configuring-with-CMake.html#Most-prominent-options">2.3.2 Most prominent options</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Input-_002f-output" href="Configuring-with-CMake.html#Input-_002f-output">2.3.2.1 Input / output</a></li>
+        <li><a name="toc-Code-messages-and-optional-portions" href="Configuring-with-CMake.html#Code-messages-and-optional-portions">2.3.2.2 Code messages and optional portions</a></li>
+        <li><a name="toc-Message-logging" href="Configuring-with-CMake.html#Message-logging">2.3.2.3 Message logging</a></li>
+        <li><a name="toc-Testing" href="Configuring-with-CMake.html#Testing">2.3.2.4 Testing</a></li>
+        <li><a name="toc-Optional-software" href="Configuring-with-CMake.html#Optional-software">2.3.2.5 Optional software</a></li>
+        <li><a name="toc-Documentation" href="Configuring-with-CMake.html#Documentation">2.3.2.6 Documentation</a></li>
+      </ul></li>
+    </ul></li>
+    <li><a name="toc-Post_002dinstall-setup-1" href="Post_002dinstall-setup.html#Post_002dinstall-setup">2.4 Post-install setup</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Vim-editor-support-1" href="Vim-editor-support.html#Vim-editor-support">2.4.1 Vim editor support</a></li>
+      <li><a name="toc-Datasets-1" href="Datasets.html#Datasets">2.4.2 Datasets</a></li>
+    </ul></li>
+    <li><a name="toc-Structure-of-distribution-1" href="Structure-of-distribution.html#Structure-of-distribution">2.5 Structure of distribution</a></li>
+  </ul></li>
+  <li><a name="toc-Tour-1" href="Tour.html#Tour">3 Tour</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Command_002dline-tools-1" href="Command_002dline-tools.html#Command_002dline-tools">3.1 Command-line tools</a></li>
+    <li><a name="toc-User-interfaces-1" href="User-interfaces.html#User-interfaces">3.2 User interfaces</a></li>
+    <li><a name="toc-Web-information-1" href="Web-information.html#Web-information">3.3 Web information</a></li>
+  </ul></li>
+  <li><a name="toc-Available-tools-1" href="Available-tools.html#Available-tools">4 Available tools</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Collections-and-input-files-1" href="Collections-and-input-files.html#Collections-and-input-files">4.1 Collections and input files</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Creating-collections-manually-1" href="Creating-collections-manually.html#Creating-collections-manually">4.1.1 Creating collections manually</a></li>
+      <li><a name="toc-Labels" href="Creating-collections-manually.html#Labels">4.1.2 Labels</a></li>
+      <li><a name="toc-MARSYAS_005fDATADIR" href="Creating-collections-manually.html#MARSYAS_005fDATADIR">4.1.3 <code>MARSYAS_DATADIR</code></a></li>
+      <li><a name="toc-mkcollection-1" href="mkcollection.html#mkcollection">4.1.4 <code>mkcollection</code></a></li>
+      <li><a name="toc-Plain-filenames-in-collections-1" href="Plain-filenames-in-collections.html#Plain-filenames-in-collections">4.1.5 Plain filenames in collections</a></li>
+    </ul></li>
+    <li><a name="toc-Soundfile-Interaction-1" href="Soundfile-Interaction.html#Soundfile-Interaction">4.2 Soundfile Interaction</a>
+    <ul class="no-bullet">
+      <li><a name="toc-sfplay-1" href="sfplay.html#sfplay">4.2.1 <code>sfplay</code></a></li>
+      <li><a name="toc-sfinfo-1" href="sfinfo.html#sfinfo">4.2.2 <code>sfinfo</code></a></li>
+      <li><a name="toc-audioCompare-1" href="audioCompare.html#audioCompare">4.2.3 <code>audioCompare</code></a></li>
+      <li><a name="toc-record-1" href="record.html#record">4.2.4 <code>record</code></a></li>
+      <li><a name="toc-orcarecord-1" href="orcarecord.html#orcarecord">4.2.5 <code>orcarecord</code></a></li>
+      <li><a name="toc-sound2png-1" href="sound2png.html#sound2png">4.2.6 <code>sound2png</code></a></li>
+      <li><a name="toc-sound2sound-1" href="sound2sound.html#sound2sound">4.2.7 <code>sound2sound</code></a></li>
+    </ul></li>
+    <li><a name="toc-Feature-Extraction-1" href="Feature-Extraction.html#Feature-Extraction">4.3 Feature Extraction</a>
+    <ul class="no-bullet">
+      <li><a name="toc-pitchextract-1" href="pitchextract.html#pitchextract">4.3.1 <code>pitchextract</code></a></li>
+      <li><a name="toc-bextract-1" href="bextract.html#bextract">4.3.2 <code>bextract</code></a></li>
+      <li><a name="toc-ibt-1" href="ibt.html#ibt">4.3.3 <code>ibt</code></a></li>
+    </ul></li>
+    <li><a name="toc-Synthesis-1" href="Synthesis.html#Synthesis">4.4 Synthesis</a>
+    <ul class="no-bullet">
+      <li><a name="toc-phasevocoder-1" href="phasevocoder.html#phasevocoder">4.4.1 <code>phasevocoder</code></a></li>
+    </ul></li>
+    <li><a name="toc-Machine-Learning-1" href="Machine-Learning.html#Machine-Learning">4.5 Machine Learning</a>
+    <ul class="no-bullet">
+      <li><a name="toc-kea-1" href="kea.html#kea">4.5.1 <code>kea</code></a></li>
+    </ul></li>
+    <li><a name="toc-Auditory-Scene-Analysis-1" href="Auditory-Scene-Analysis.html#Auditory-Scene-Analysis">4.6 Auditory Scene Analysis</a>
+    <ul class="no-bullet">
+      <li><a name="toc-peakSynth-1" href="peakSynth.html#peakSynth">4.6.1 <code>peakSynth</code></a></li>
+      <li><a name="toc-peakClustering-1" href="peakClustering.html#peakClustering">4.6.2 <code>peakClustering</code></a></li>
+    </ul></li>
+    <li><a name="toc-Marsystem-Interaction-1" href="Marsystem-Interaction.html#Marsystem-Interaction">4.7 Marsystem Interaction</a>
+    <ul class="no-bullet">
+      <li><a name="toc-sfplugin-1" href="sfplugin.html#sfplugin">4.7.1 <code>sfplugin</code></a></li>
+      <li><a name="toc-msl-1" href="msl.html#msl">4.7.2 <code>msl</code></a></li>
+    </ul></li>
+    <li><a name="toc-All-of-the-above-1" href="All-of-the-above.html#All-of-the-above">4.8 All of the above</a>
+    <ul class="no-bullet">
+      <li><a name="toc-mudbox-1" href="mudbox.html#mudbox">4.8.1 <code>mudbox</code></a></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Graphical-User-Interfaces-using-Qt4-1" href="Graphical-User-Interfaces-using-Qt4.html#Graphical-User-Interfaces-using-Qt4">5 Graphical User Interfaces using Qt4</a>
+  <ul class="no-bullet">
+    <li><a name="toc-MarPlayer-1" href="MarPlayer.html#MarPlayer">5.1 MarPlayer</a></li>
+    <li><a name="toc-MarPhaseVocoder-1" href="MarPhaseVocoder.html#MarPhaseVocoder">5.2 MarPhaseVocoder</a></li>
+    <li><a name="toc-MarGrid-1" href="MarGrid.html#MarGrid">5.3 MarGrid</a></li>
+    <li><a name="toc-MarMonitors-1" href="MarMonitors.html#MarMonitors">5.4 MarMonitors</a></li>
+    <li><a name="toc-MarLPC-1" href="MarLPC.html#MarLPC">5.5 MarLPC</a></li>
+  </ul></li>
+  <li><a name="toc-Architecture-concepts-1" href="Architecture-concepts.html#Architecture-concepts">6 Architecture concepts</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Architecture-overview-1" href="Architecture-overview.html#Architecture-overview">6.1 Architecture overview</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Building-MarSystems-1" href="Building-MarSystems.html#Building-MarSystems">6.1.1 Building MarSystems</a></li>
+      <li><a name="toc-Dataflow-model-1" href="Dataflow-model.html#Dataflow-model">6.1.2 Dataflow model</a></li>
+    </ul></li>
+    <li><a name="toc-Implicit-patching-1" href="Implicit-patching.html#Implicit-patching">6.2 Implicit patching</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Implicit-patching-vs_002e-explicit-patching-1" href="Implicit-patching-vs_002e-explicit-patching.html#Implicit-patching-vs_002e-explicit-patching">6.2.1 Implicit patching vs. explicit patching</a></li>
+      <li><a name="toc-Implicit-patching-advantages-1" href="Implicit-patching-advantages.html#Implicit-patching-advantages">6.2.2 Implicit patching advantages</a></li>
+      <li><a name="toc-Patching-example-of-Feature-extraction-1" href="Patching-example-of-Feature-extraction.html#Patching-example-of-Feature-extraction">6.2.3 Patching example of Feature extraction</a></li>
+    </ul></li>
+    <li><a name="toc-MarSystem-composites-1" href="MarSystem-composites.html#MarSystem-composites">6.3 MarSystem composites</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Series-1" href="Series.html#Series">6.3.1 Series</a></li>
+      <li><a name="toc-Parallel-1" href="Parallel.html#Parallel">6.3.2 Parallel</a></li>
+      <li><a name="toc-Fanout-1" href="Fanout.html#Fanout">6.3.3 Fanout</a></li>
+      <li><a name="toc-Accumulator-1" href="Accumulator.html#Accumulator">6.3.4 Accumulator</a></li>
+      <li><a name="toc-Shredder-1" href="Shredder.html#Shredder">6.3.5 Shredder</a></li>
+    </ul></li>
+    <li><a name="toc-Linking-of-controls-1" href="Linking-of-controls.html#Linking-of-controls">6.4 Linking of controls</a></li>
+    <li><a name="toc-Scheduling-1" href="Scheduling.html#Scheduling">6.5 Scheduling</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Scheduling-in-Marsyas-1" href="Scheduling-in-Marsyas.html#Scheduling-in-Marsyas">6.5.1 Scheduling in Marsyas</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Time" href="Scheduling-in-Marsyas.html#Time">6.5.1.1 Time</a></li>
+        <li><a name="toc-Event" href="Scheduling-in-Marsyas.html#Event">6.5.1.2 Event</a></li>
+      </ul></li>
+      <li><a name="toc-Components-of-the-Marsyas-Scheduler-1" href="Components-of-the-Marsyas-Scheduler.html#Components-of-the-Marsyas-Scheduler">6.5.2 Components of the Marsyas Scheduler</a>
+      <ul class="no-bullet">
+        <li><a name="toc-MarSystem" href="Components-of-the-Marsyas-Scheduler.html#MarSystem">6.5.2.1 MarSystem</a></li>
+        <li><a name="toc-Scheduler" href="Components-of-the-Marsyas-Scheduler.html#Scheduler">6.5.2.2 Scheduler</a></li>
+        <li><a name="toc-Timers" href="Components-of-the-Marsyas-Scheduler.html#Timers">6.5.2.3 Timers</a></li>
+        <li><a name="toc-Events" href="Components-of-the-Marsyas-Scheduler.html#Events">6.5.2.4 Events</a></li>
+        <li><a name="toc-Repeat" href="Components-of-the-Marsyas-Scheduler.html#Repeat">6.5.2.5 Repeat</a></li>
+        <li><a name="toc-TmTime" href="Components-of-the-Marsyas-Scheduler.html#TmTime">6.5.2.6 TmTime</a></li>
+        <li><a name="toc-TmTimerManager" href="Components-of-the-Marsyas-Scheduler.html#TmTimerManager">6.5.2.7 TmTimerManager</a></li>
+      </ul></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-System-details-1" href="System-details.html#System-details">7 System details</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Library-reference-1" href="Library-reference.html#Library-reference">7.1 Library reference</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Source-documentation" href="Library-reference.html#Source-documentation">7.1.1 Source documentation</a></li>
+      <li><a name="toc-MarSystem-groups" href="Library-reference.html#MarSystem-groups">7.1.2 MarSystem groups</a></li>
+      <li><a name="toc-Limited-documentation" href="Library-reference.html#Limited-documentation">7.1.3 Limited documentation</a></li>
+    </ul></li>
+    <li><a name="toc-Predefined-types-1" href="Predefined-types.html#Predefined-types">7.2 Predefined types</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Variables-types" href="Predefined-types.html#Variables-types">7.2.1 Variables types</a></li>
+      <li><a name="toc-Constants" href="Predefined-types.html#Constants">7.2.2 Constants</a></li>
+    </ul></li>
+    <li><a name="toc-Realvec-1" href="Realvec.html#Realvec">7.3 Realvec</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Reading-and-writing-to-a-realvec-1" href="Reading-and-writing-to-a-realvec.html#Reading-and-writing-to-a-realvec">7.3.1 Reading and writing to a realvec</a></li>
+      <li><a name="toc-Resizing-a-realvec-1" href="Resizing-a-realvec.html#Resizing-a-realvec">7.3.2 Resizing a realvec</a></li>
+      <li><a name="toc-Realvec-arithmetic-1" href="Realvec-arithmetic.html#Realvec-arithmetic">7.3.3 Realvec arithmetic</a></li>
+      <li><a name="toc-Applying-a-function-to-a-realvec-1" href="Applying-a-function-to-a-realvec.html#Applying-a-function-to-a-realvec">7.3.4 Applying a function to a realvec</a></li>
+      <li><a name="toc-Realvec-input-and-output-to-a-file-1" href="Realvec-input-and-output-to-a-file.html#Realvec-input-and-output-to-a-file">7.3.5 Realvec input and output to a file</a></li>
+      <li><a name="toc-Statistical-analysis-1" href="Statistical-analysis.html#Statistical-analysis">7.3.6 Statistical analysis</a></li>
+      <li><a name="toc-Other-realvec-functions-1" href="Other-realvec-functions.html#Other-realvec-functions">7.3.7 Other realvec functions</a></li>
+    </ul></li>
+    <li><a name="toc-System-limitations" href="Systems-limitations.html#Systems-limitations">7.4 System limitations</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Stereo-vs_002e-mono-in-a-spectrum" href="Systems-limitations.html#Stereo-vs_002e-mono-in-a-spectrum">7.4.1 Stereo vs. mono in a spectrum</a></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Scripting-1" href="Scripting.html#Scripting">8 Scripting</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Interactive-python-1" href="Interactive-python.html#Interactive-python">8.1 Interactive python</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Getting-started-with-python-1" href="Getting-started-with-python.html#Getting-started-with-python">8.1.1 Getting started with python</a></li>
+      <li><a name="toc-Swig-python-bindings-bextract-example-1" href="Swig-python-bindings-bextract-example.html#Swig-python-bindings-bextract-example">8.1.2 Swig python bindings bextract example</a></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Writing-applications-1" href="Writing-applications.html#Writing-applications">9 Writing applications</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Including-libraries-and-linking-1" href="Including-libraries-and-linking.html#Including-libraries-and-linking">9.1 Including libraries and linking</a>
+    <ul class="no-bullet">
+      <li><a name="toc-_002e_002e_002e-using-qmake" href="Including-libraries-and-linking.html#g_t_002e_002e_002e-using-qmake">9.1.1 ... using qmake</a></li>
+      <li><a name="toc-_002e_002e_002e-writing-your-own-Makefile" href="Including-libraries-and-linking.html#g_t_002e_002e_002e-writing-your-own-Makefile">9.1.2 ... writing your own Makefile</a></li>
+      <li><a name="toc-_002e_002e_002e-on-Windows-Visual-Studio" href="Including-libraries-and-linking.html#g_t_002e_002e_002e-on-Windows-Visual-Studio">9.1.3 ... on Windows Visual Studio</a></li>
+    </ul></li>
+    <li><a name="toc-Example-programs-1" href="Example-programs.html#Example-programs">9.2 Example programs</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Hello-World-_0028playing-an-audio-file_0029-1" href="Hello-World-_0028playing-an-audio-file_0029.html#Hello-World-_0028playing-an-audio-file_0029">9.2.1 Hello World (playing an audio file)</a></li>
+      <li><a name="toc-Reading-and-altering-controls-1" href="Reading-and-altering-controls.html#Reading-and-altering-controls">9.2.2 Reading and altering controls</a></li>
+      <li><a name="toc-Writing-data-to-text-files-1" href="Writing-data-to-text-files.html#Writing-data-to-text-files">9.2.3 Writing data to text files</a></li>
+      <li><a name="toc-Getting-data-from-the-network-1" href="Getting-data-from-the-network.html#Getting-data-from-the-network">9.2.4 Getting data from the network</a></li>
+      <li><a name="toc-Command_002dline-options-1" href="Command_002dline-options.html#Command_002dline-options">9.2.5 Command-line options</a></li>
+    </ul></li>
+    <li><a name="toc-Writing-Qt4-applications-1" href="Writing-Qt4-applications.html#Writing-Qt4-applications">9.3 Writing Qt4 applications</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Including-and-linking-to-libmarsyasqt-1" href="Including-and-linking-to-libmarsyasqt.html#Including-and-linking-to-libmarsyasqt">9.3.1 Including and linking to libmarsyasqt</a></li>
+      <li><a name="toc-MarSystemQtWrapper-1" href="MarSystemQtWrapper.html#MarSystemQtWrapper">9.3.2 MarSystemQtWrapper</a></li>
+      <li><a name="toc-Passing-controls-to-a-MarSystemQtWrapper-1" href="Passing-controls-to-a-MarSystemQtWrapper.html#Passing-controls-to-a-MarSystemQtWrapper">9.3.3 Passing controls to a MarSystemQtWrapper</a></li>
+      <li><a name="toc-Other-classes-in-MarsyasQt-1" href="Other-classes-in-MarsyasQt.html#Other-classes-in-MarsyasQt">9.3.4 Other classes in MarsyasQt</a></li>
+      <li><a name="toc-Qt4-example-1" href="Qt4-example.html#Qt4-example">9.3.5 Qt4 example</a></li>
+      <li><a name="toc-Other-Qt4-issues-1" href="Other-Qt4-issues.html#Other-Qt4-issues">9.3.6 Other Qt4 issues</a></li>
+    </ul></li>
+    <li><a name="toc-Other-programming-issues-1" href="Other-programming-issues.html#Other-programming-issues">9.4 Other programming issues</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Visualizing-data-with-gnuplot-1" href="Visualizing-data-with-gnuplot.html#Visualizing-data-with-gnuplot">9.4.1 Visualizing data with gnuplot</a></li>
+    </ul></li>
+    <li><a name="toc-Interoperability-1" href="Interoperability.html#Interoperability">9.5 Interoperability</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Open-Sound-Control-_0028OSC_0029-1" href="Open-Sound-Control-_0028OSC_0029.html#Open-Sound-Control-_0028OSC_0029">9.5.1 Open Sound Control (OSC)</a></li>
+      <li><a name="toc-WEKA-1" href="WEKA.html#WEKA">9.5.2 WEKA</a></li>
+      <li><a name="toc-MATLAB-1" href="MATLAB.html#MATLAB">9.5.3 MATLAB</a></li>
+      <li><a name="toc-Python-1" href="Python.html#Python">9.5.4 Python</a></li>
+      <li><a name="toc-OCaml-1" href="OCaml.html#OCaml">9.5.5 OCaml</a></li>
+      <li><a name="toc-SonicVisualiser-Vamp-Plugins-1" href="SonicVisualiser-Vamp-Plugins.html#SonicVisualiser-Vamp-Plugins">9.5.6 SonicVisualiser Vamp Plugins</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Instalation" href="SonicVisualiser-Vamp-Plugins.html#Instalation">9.5.6.1 Instalation</a></li>
+        <li><a name="toc-Writing-Plugin" href="SonicVisualiser-Vamp-Plugins.html#Writing-Plugin">9.5.6.2 Writing Plugin</a></li>
+      </ul></li>
+    </ul></li>
+    <li><a name="toc-Using-and-Extending-the-Scheduler-1" href="Using-and-Extending-the-Scheduler.html#Using-and-Extending-the-Scheduler">9.6 Using and Extending the Scheduler</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Using-the-Scheduler-1" href="Using-the-Scheduler.html#Using-the-Scheduler">9.6.1 Using the Scheduler</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Repeating-Events" href="Using-the-Scheduler.html#Repeating-Events">9.6.1.1 Repeating Events</a></li>
+      </ul></li>
+      <li><a name="toc-Writing-a-new-Timer-1" href="Writing-a-new-Timer.html#Writing-a-new-Timer">9.6.2 Writing a new Timer</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Updating-timers-at-run_002dtime" href="Writing-a-new-Timer.html#Updating-timers-at-run_002dtime">9.6.2.1 Updating timers at run-time</a></li>
+        <li><a name="toc-Timer-Factory" href="Writing-a-new-Timer.html#Timer-Factory">9.6.2.2 Timer Factory</a></li>
+      </ul></li>
+      <li><a name="toc-Writing-a-new-Event-1" href="Writing-a-new-Event.html#Writing-a-new-Event">9.6.3 Writing a new Event</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Expression-Events" href="Writing-a-new-Event.html#Expression-Events">9.6.3.1 Expression Events</a></li>
+      </ul></li>
+      <li><a name="toc-Marsyas-Expression-Syntax-1" href="Marsyas-Expression-Syntax.html#Marsyas-Expression-Syntax">9.6.4 Marsyas Expression Syntax</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Type-System-1" href="Type-System.html#Type-System">9.6.4.1 Type System</a></li>
+        <li><a name="toc-Operators-1" href="Operators.html#Operators">9.6.4.2 Operators</a></li>
+        <li><a name="toc-Variables-1" href="Variables.html#Variables">9.6.4.3 Variables</a></li>
+        <li><a name="toc-Assignment-_0028-_003c_003c-_003e_003e-_0029" href="Assignment.html#Assignment">9.6.4.4 Assignment ( &lt;&lt; &gt;&gt; )</a></li>
+        <li><a name="toc-Links-_0028-_002d_003e-_003c_002d-_0029" href="Links.html#Links">9.6.4.5 Links ( -&gt; &lt;- )</a></li>
+        <li><a name="toc-Conditional-Statements-_0028-_007b_003f-cond_005fexpr-_003a-exprs1-_003a-exprs2-_007d-_0029" href="Conditional-Statements.html#Conditional-Statements">9.6.4.6 Conditional Statements ( {? cond_expr : exprs1 : exprs2 } )</a></li>
+        <li><a name="toc-Multiple-Expressions-_0028-exprs-_003a_003d-expr1-_002c-expr2-_002c-expr3-_0029" href="Multiple-Expressions.html#Multiple-Expressions">9.6.4.7 Multiple Expressions ( exprs := expr1 , expr2 , expr3 )</a></li>
+        <li><a name="toc-Properties-_0028-ie-Real_002epi-or-_0027hello_0027_002e2-etc_002e-_0029" href="Properties.html#Properties">9.6.4.8 Properties ( ie Real.pi or &rsquo;hello&rsquo;.2 etc. )</a></li>
+        <li><a name="toc-Sequences-_0028Lists_0029" href="Sequences.html#Sequences">9.6.4.9 Sequences (Lists)</a></li>
+        <li><a name="toc-Function-Libraries-1" href="Function-Libraries.html#Function-Libraries">9.6.4.10 Function Libraries</a></li>
+        <li><a name="toc-Using-1" href="Using.html#Using">9.6.4.11 Using</a></li>
+        <li><a name="toc-Extending-1" href="Extending.html#Extending">9.6.4.12 Extending</a></li>
+        <li><a name="toc-Marsyas-Expression-Examples-1" href="Marsyas-Expression-Examples.html#Marsyas-Expression-Examples">9.6.4.13 Marsyas Expression Examples</a></li>
+      </ul></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Programming-MarSystems-1" href="Programming-MarSystems.html#Programming-MarSystems">10 Programming MarSystems</a>
+  <ul class="no-bullet">
+    <li><a name="toc-Compiling-and-using-a-new-MarSystem-1" href="Compiling-and-using-a-new-MarSystem.html#Compiling-and-using-a-new-MarSystem">10.1 Compiling and using a new MarSystem</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Writing-your-own-MarSystems-1" href="Writing-your-own-MarSystems.html#Writing-your-own-MarSystems">10.1.1 Writing your own MarSystems</a></li>
+      <li><a name="toc-Using-your-MarSystem-1" href="Using-your-MarSystem.html#Using-your-MarSystem">10.1.2 Using your MarSystem</a></li>
+    </ul></li>
+    <li><a name="toc-Anatomy-of-a-MarSystem-1" href="Anatomy-of-a-MarSystem.html#Anatomy-of-a-MarSystem">10.2 Anatomy of a MarSystem</a>
+    <ul class="no-bullet">
+      <li><a name="toc-Methods-of-the-object-1" href="Methods-of-the-object.html#Methods-of-the-object">10.2.1 Methods of the object</a></li>
+      <li><a name="toc-Constructors-_002f-destructor-1" href="Constructors-_002f-destructor.html#Constructors-_002f-destructor">10.2.2 Constructors / destructor</a>
+      <ul class="no-bullet">
+        <li><a name="toc-Copy-constructor" href="Constructors-_002f-destructor.html#Copy-constructor">Copy constructor</a></li>
+      </ul></li>
+      <li><a name="toc-Handling-controls-1" href="Handling-controls.html#Handling-controls">10.2.3 Handling controls</a></li>
+      <li><a name="toc-myProcess_0028_0029-1" href="myProcess_0028_0029.html#myProcess_0028_0029">10.2.4 <code>myProcess()</code></a></li>
+      <li><a name="toc-myUpdate_0028_0029-vs_002e-myProcess_0028_0029-1" href="myUpdate_0028_0029-vs_002e-myProcess_0028_0029.html#myUpdate_0028_0029-vs_002e-myProcess_0028_0029">10.2.5 <code>myUpdate()</code> vs. <code>myProcess()</code></a></li>
+      <li><a name="toc-More-details-about-MarSystems-1" href="More-details-about-MarSystems.html#More-details-about-MarSystems">10.2.6 More details about MarSystems</a></li>
+    </ul></li>
+  </ul></li>
+  <li><a name="toc-Missing-Docs-1" href="Missing-Docs.html#Missing-Docs">Missing Docs</a></li>
+  <li><a name="toc-The-Index-1" href="The-Index.html#The-Index">The Index</a></li>
+</ul>
+</div>
+
+     
+      
+<a name="Top"></a>
+<div class="header">
+<p>
+Next: <a href="General-information.html#General-information" accesskey="n" rel="next">General information</a>, Up: <a href="../dir/index.html" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Marsyas-User-Manual"></a>
+<h1 class="top">Marsyas User Manual</h1>
+
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="General-information.html#General-information" accesskey="1">General information</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Introduction, history, related work, and goals.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Source-installation.html#Source-installation" accesskey="2">Source installation</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Installation instructions for different operating systems.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Tour.html#Tour" accesskey="3">Tour</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">A tour of Marsyas functionality 
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Available-tools.html#Available-tools" accesskey="4">Available tools</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Various sample tools built using marsyas
+components.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Graphical-User-Interfaces-using-Qt4.html#Graphical-User-Interfaces-using-Qt4" accesskey="5">Graphical User Interfaces using Qt4</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Various sample tools built using
+marsyas and Qt.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Architecture-concepts.html#Architecture-concepts" accesskey="6">Architecture concepts</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Important concepts about Marsyas.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="System-details.html#System-details" accesskey="7">System details</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Details about Marsyas.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Scripting.html#Scripting" accesskey="8">Scripting</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Working with MarSystems without C++.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Writing-applications.html#Writing-applications" accesskey="9">Writing applications</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Writing programs that use Marsyas.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Programming-MarSystems.html#Programming-MarSystems">Programming MarSystems</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Writing new MarSystem blocks.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Missing-Docs.html#Missing-Docs">Missing Docs</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Your assistance requested!
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="The-Index.html#The-Index">The Index</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">The Index.
+</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="General-information.html#General-information" accesskey="n" rel="next">General information</a>, Up: <a href="../dir/index.html" accesskey="u" rel="up">(dir)</a> &nbsp; [<a href="#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

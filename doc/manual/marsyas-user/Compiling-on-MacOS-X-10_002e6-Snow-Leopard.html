@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Compiling on MacOS X 10.6 Snow Leopard</title>
+
+<meta name="description" content="Marsyas User Manual: Compiling on MacOS X 10.6 Snow Leopard">
+<meta name="keywords" content="Marsyas User Manual: Compiling on MacOS X 10.6 Snow Leopard">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" rel="up" title="Step-by-step building instructions">
+<link href="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029.html#Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029" rel="next" title="Compiling on Ubuntu 11.04 - Natty Narwhal (2011)">
+<link href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" rel="prev" title="Building latest Marsyas on Windows">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Compiling-on-MacOS-X-10_002e6-Snow-Leopard"></a>
+<div class="header">
+<p>
+Next: <a href="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029.html#Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029" accesskey="n" rel="next">Compiling on Ubuntu 11.04 - Natty Narwhal (2011)</a>, Previous: <a href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" accesskey="p" rel="prev">Building latest Marsyas on Windows</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Compiling-on-MacOS-X-10_002e6-Snow-Leopard-1"></a>
+<h4 class="subsection">2.2.4 Compiling on MacOS X 10.6 Snow Leopard</h4>
+
+<p>These steps were used to install Marsyas on a fresh
+MacOS X 10.6.2 Snow Leopard desktop. <a name="index-MacOSX"></a>
+on January 24, 2010.
+These instructions below can be used to compile the DEFAULT Marsyas
+configuration under Mac OSX Snow Leopard (10.6.2):
+</p>
+
+<ol>
+<li> 
+Download (or find it on your Snow Leopard MacOSX install CD) and install
+XCode Developer Tools (it&rsquo;s freely provided by Apple, but you may need
+to register and get a developer account online - see here:
+http://developer.apple.com/tools/xcode/) in your machine. If you
+download XCode from the Apple website (make sure you download the Snow
+Leopard version!) you may get a more updated version of the Developer
+Tools than the one provided in the OSX instal disk, but any version
+should work with Marsyas.
+
+</li><li> 
+Download and install the CMake 2.8.0 (or later) binary for Apple OSX in
+http://www.cmake.org. During install, CMake will ask you if it should
+install the &quot;command line links&quot; (i.e. links to ccmake, cmake, etc.),
+which we recommend you to do (you&rsquo;ll need administrator rights to
+install them, so make sure you are logged in as an administrator).
+
+</li><li> 
+Apple Mac OSX 10.6.2 Snow Leopard already includes SVN
+(http://subversion.tigris.org/) as a command line tool (you can run
+&quot;which svn&quot; at the OSX terminal to check that - it should reply with
+&quot;/usr/bin/svn&quot;, which is the path to the SVN binary installed in your
+system). In case you prefer using a GUI for SVN in Mac OSX, you can try
+the free SvnX (http://code.google.com/p/svnx/).
+
+</li><li> 
+In case you want to check out the SVN version of Marsyas, just do
+a SVN checkout from
+<code>https://svn.code.sf.net/p/marsyas/code/trunk</code>
+ - you will get the most updated version (but not necessarily the
+   most stable version ;-) - for that, get the latest tarbal from
+the Marsyas SourceForge website: http://marsyas.sf.net).
+
+</li><li> 
+Launch CMake (using the CMake GUI that you can find in the OSX
+Applications folder using Finder, or using the command line tool ccmake
+in the OSX terminal), and specify the source and build directory you
+want to use for Marsyas. For example, if you have the Marsyas code
+directory in you home directory (e.g. ~/Marsyas), you should point your
+source path to ~/Marsyas/src and the build directory to somewhere like
+~/Marsyas/build/ (you may have to create the ~/Marsyas/build directory
+before hand in case CMake GUI or ccmake does not create it for
+you. Either using CMake GUI or ccmake in the terminal, just select the
+option to &quot;configure&quot; using the provided options (i.e. using the default
+Marsyas build configuration). CMake GUI will ask youif you want to
+create the &quot;~/Marsyas/build&quot; directory in case you haven&rsquo;t dreated it
+yourself, and then ask you to select a generator from a drop down list -
+here you can ask CMake to create an UNIX makefile, a XCode project,
+among other options, but for now just use the provided options and click
+&quot;done&quot; (you can also specify a generator when using the command line
+tool ccmake - check its documentation). CMake will then look into your
+system for libraries, compilers, and present you with a list of the
+configuration options it set up for you. Just keep hitting &quot;configure&quot;
+until all options are grey (in the CMake GUI) or not signaled with a *
+(if using ccmake on the terminal), and then just select &quot;generate&quot;. This
+will generate a UNIX makefile with the default build option for
+Marsyas. You can now close CMake.
+
+</li><li> 
+Open a terminal window in OSX (in case you haven&rsquo;t yet) and go to
+~/Marsyas/build directory and just run &quot;make&quot;. Marsyas compilation will
+start, and you will be able to see the compilation evolution in the
+compiler messages in the terminal. When finished, you will be able to
+find the compiled binaries in the ~/Marsyas/build/bin directory. If you
+want to install the Marsyas command line tools (e.g. sfplay, bextract,
+sfplugin, etc.) into your system, just run &quot;sudo make install&quot; and those
+tools will be installed in the appropriate system folders in your
+machine (you will need administrator privileges to use &quot;sudo&quot;).
+
+</li><li> 
+As a test to see see Marsyas in action, just go to ~/Marsyas/build/bin and run:
+
+<p>$ ./sfplay someAudioFile.wav
+</p>
+<p>where $ is the command line prompt, and someAudioFile.wav is the path to
+some audio file you have in your machine. It should start playing it, so
+bump up your computer volume and enjoy (hit CTRL-C to stop it). If you
+installed Marsyas in your system (by means of &quot;sudo make install&quot;) you
+can just call splay (or any other Marsyas command line tool) from
+anywhere (i.e. from any directory) in the terminal.
+</p>
+</li></ol>
+
+
+<a name="Using-additional-and-optional-libraries"></a>
+<h4 class="subheading">Using additional and optional libraries</h4>
+
+<p>Marsyas can also be compiled using some optional libraries for things
+like MP3 file reading/writing, GUI, python bindings, among other
+options. You define these building options in CMake, during the
+configuration/generating step (see step 5. above). You can manually
+install most of the needed libraries in OSX, but it requires some
+expertise in dealing with library dependencies, library configuration,
+building and install.
+</p>
+
+<a name="Using-MACPORTS"></a>
+<h4 class="subsubheading">Using MACPORTS</h4>
+
+<p>A more convenient (and recommended) way to install such libraries in OSX
+is to use a project called MacPorts (http://www.macports.org/). MacPorts
+provides a large set of libraries and applications available for UNIX
+customized and ready to use in OSX, and deals with dependencies in
+projects so you don&rsquo;t have to worry about them.
+</p>
+<p>So, we recommend you install MacPorts in your machine following the
+steps below:
+</p>
+<ol>
+<li> 
+Download MacPorts 1.8.2 (or later) for Snow Leopard at http://www.macports.org
+
+</li><li> Install MacPorts (detailed info can be found at http://www.macports.org/install.php)
+
+</li><li> MacPorts adds its own paths (i.e. /opt/local/bin and /opt/local/sbin) to your PATH during install (MacPorts is installed in /opt/). That is done in ~/.profile, or in case you have it in you home directory, in .bash_profile. In order to make those paths into the current command line session, you must do &quot;source .profile&quot; (or &quot;source .bash_profile&quot;), or just close and open a new terminal window.
+
+</li><li> A final step is to make sure MacPorts is updated. Just do &quot;sudo port -v selfupdate&quot; at the terminal. That&rsquo;s it.
+
+</li><li> There is a nice GUI front end for MacPorts named Porticus (http://porticus.alittledrop.com/), in case you don&rsquo;t want to lean MacPorts syntax for the command line.
+
+</li></ol>
+
+
+<a name="MP3-reading-support-_0028libmad_0029"></a>
+<h4 class="subsubheading">MP3 reading support (libmad)</h4>
+
+<ol>
+<li> 
+Marsyas makes use of the external MAD library (http://www.underbit.com/products/mad/) for MP3 reading support. You can find it in MacPorts as &quot;libmad&quot;. Just install it.
+
+</li><li> 
+To build Marsyas with libMAD support, run CMake (remember to select a different build directory - e.g. ~/Marsyas/build_with_MAD) and run &quot;configure&quot;, and then select (or turn ON) the WITH_MAD option and run &quot;configure&quot; again. After the second &quot;configure&quot;, CMake should present you the paths to the libmad libraries, like this:
+
+<div class="example">
+<pre class="example">mad_INCLUDE_DIR		/opt/local/include
+mad_LIBRARY			/opt/local/lib/libmad.dylib
+</pre></div>
+
+<p>In case it does not, you can always change them manually in CMake so they correspond to the above paths.
+</p>
+</li><li> 
+Execute &quot;configure&quot; once again, and when the &quot;generate&quot; option becomes available in CMake, execute it and the corresponding makefile for building Marsyas with MAD support will be generated. You can then test if things went well by doing:
+
+<div class="example">
+<pre class="example">$ cd ~/Marsyas/build_with_MAD/bin
+$  ./sfplay someMP3file.mp3
+</pre></div>
+
+</li><li> 
+You can also install this new Marsyas build with MP3 reading support into your system by doing &quot;sudo make install&quot;.
+
+</li></ol>
+
+<a name="MP3-writing-support-_0028LAME_0029"></a>
+<h4 class="subsubheading">MP3 writing support (LAME)</h4>
+
+<ol>
+<li> 
+Marsyas makes use of the external LAME library (http://lame.sourceforge.net/) for MP3 writing support. You can find it in MacPorts as &quot;lame&quot;. Just install it.
+
+</li><li> 
+To build Marsyas with LAME support, run CMake (remember to select a different build directory - e.g. ~/Marsyas/build_with_LAME) and run &quot;configure&quot;, and then select (or turn ON) the WITH_LAME option and run &quot;configure&quot; again. After the second &quot;configure&quot;, CMake should present you the paths to the lame libraries, like this:
+
+<div class="example">
+<pre class="example">lame_LIBRARY			/opt/local/lib/libmp3lame.dylib
+lame_INCLUDE_DIR	/opt/local/include
+</pre></div>
+
+<p>In case it does not, you can always change them manually in CMake so
+they correspond to the above paths.
+</p>
+</li></ol>
+
+<a name="Nokia-Qt-SUPPORT"></a>
+<h4 class="subsubheading">Nokia Qt SUPPORT</h4>
+
+<p>Marsyas uses the Qt Toolkit (http://qt.nokia.com/) for its GUI applications (e.g. MarPlayer, MarPhaseVocoder, etc.). In order to build Marsyas with Qt support, follow the next steps:
+</p>
+<ol>
+<li> 
+Download and install Qt 4.6.1 64 bits for cocoa (there are other Qt versions for carbon and 32 bit, but for Snow Leopard, the 64 bit cocoa SDK version should be the one to get - get the LGPL version here: http://get.qt.nokia.com/qt/source/qt-mac-cocoa-opensource-4.6.1.dmg)
+
+</li><li> 
+2. In CMake, create a new binary folder (e.g. ~/Marsyas/build_with_Qt), select the option WITH_QT, and CMake should find the Qt libraries in your system and generate a makefile that you can use to build Marsyas with Qt support. In this case, some new applications will get built in ~/Marsyas/build_with_Qt/bin - just try MarPhaseVocoder or MarPlayer, which provide a GUI.
+
+</li></ol>
+
+<a name="Python-bindings"></a>
+<h4 class="subsubheading">Python bindings</h4>
+
+<p>The following optional steps can be used to setup the Marsyas python
+bindings using SWIG and setup the NumPy,SciPy,Matlplotlib environment,
+using MacPorts. This setup is a great free substitute for MATLAB and
+integrates very nicely with Marsyas all in a Python environment.
+</p>
+<ol>
+<li> 
+Install python26 from MacPorts.
+
+</li><li> 
+Install swig-python from MacPorts.
+
+</li><li> 
+Install py26-numpy, py26-matplotlib, py26-ipython all from MacPorts.
+
+</li><li> 
+You should now select which python to use by default in your system
+(Apple already provides and oldish version of python in OSX 10.6.2, but
+we must set the system to use the MacPorts python instead. For that, we
+must use the python_select command line tool, that MacPorts also
+installs with python. First, list the pythons installs in your system
+using:
+
+<div class="example">
+<pre class="example">$  python_select -l
+Available versions:
+current none python26 python26-apple
+</pre></div>
+
+
+<p>To see which one is the current one do:
+</p>
+<div class="example">
+<pre class="example">$ python_select -s
+python26-apple
+</pre></div>
+
+<p>In case it&rsquo;s not the MacPorts installed python (i.e. python26), just select it:
+</p>
+<div class="example">
+<pre class="example">$ python_select python26
+</pre></div>
+
+</li><li> 
+If everything has worked so far you should be able to run the examples shown in the matplotlib webpage in your python or ipython environment.
+
+</li><li> 
+You can now start CMake and enable WITH_SWIG and reconfigure Marsyas
+(use a build_with_SWIG binary folder). If SWIG is found correctly (as it
+should) the corresponding build files are updated and you can then do
+&quot;make&quot; at the command line in ~/Marsyas/build_with_SWIG.
+
+<p>There is a little trick regarding CMake GUI and the definition of the
+PATH environment variable for GUI applications in OSX. If you run ccmake
+from the terminal, it should be able to find the MacPorts python and
+SWIG libraries (because ccmake uses the PATH env. var, that is set at
+.profile or .bash_profile - see above). However, CMake GUI, because it&rsquo;s
+a GUI app launched from the Finder knows nothing about the terminal PATH
+env. var. In OSX, GUI apps look for environment variables in a special
+environment.plist file in ~/.MacOSX (see
+http://developer.apple.com/mac/library/qa/qa2001/qa1067.html).
+</p>
+<p>In case you don&rsquo;t have the .MacOSX folder in your home directory (you
+may not have it), you&rsquo;ll need to create a folder named &ldquo;.MacOSX&rdquo; in your
+home folder (note that since there is a dot at the beginning of the
+folder name, it won&rsquo;t be visible to a simple &rsquo;ls&rsquo; - you would need to
+use &rsquo;ls -a&rsquo;) and then create a file named &ldquo;environment.plist&rdquo; in the
+~/.MacOSX folder. Put the definitions of the environment variables that
+you want defined for all GUI programs in that plist file using a format
+like the following example:
+</p>
+<div class="example">
+<pre class="example">PATH   String  /opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+</pre></div>
+
+<p>(You can use the &ldquo;Property List Editor&rdquo; that comes with Apple&rsquo;s
+developer tools or a 3rd-party plist editor - or just an ordinary text
+editor if you are careful to get the format correct.)
+</p>
+<p>You must then log out and log in again, because
+~/.MacOSX/environment.plist only gets read during login. So do not
+forget this step!
+</p>
+<p>Now CMake GUI will know about the MacPorts directory (i.e. /opt) and
+will be able to find the pythonand SWIG libs from MacPorts.
+</p>
+</li><li> 
+After compilation finished, make sure you are at
+~/Marsyas/build_with_SWIG and run &quot;sudo make install&quot;. This will install
+Marsyas into your system, as well as the Marsyas python module at the
+right places so python can import it.
+
+</li><li> 
+You should now be ready to run Marsyas inside Python. Try launching a
+Python interactive interpreter by typing &quot;python&quot; at the terminal and
+then trying:
+
+<div class="example">
+<pre class="example">          import marsyas
+</pre></div>
+
+<p>If it works you have succeeded and can try the various python Marsyas
+scripts in src/swig/python.
+</p>
+
+<a name="A-final-note"></a>
+<h4 class="subsubheading">A final note</h4>
+
+<p>In the above sections we present a way to configure the Marsyas building
+for a single optional library, but you can select a combination of any
+of them at the same time. That&rsquo;s why it may be a good idea to have a
+~/Marsyas/builds directory where you then create spear directories for
+all the different building configurations, e.g.:
+</p>
+<div class="example">
+<pre class="example">~/Marsyas/builds/make_default
+~/Marsyas/builds/make_with_MAD_LAME_SWIG
+~/Marsyas/builds/make_with_Qt
+~/Marsyas/builds/XCode_with_MAD_Qt
+etc...
+</pre></div>
+
+</li></ol>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029.html#Compiling-on-Ubuntu-11_002e04-_002d-Natty-Narwhal-_00282011_0029" accesskey="n" rel="next">Compiling on Ubuntu 11.04 - Natty Narwhal (2011)</a>, Previous: <a href="Building-latest-Marsyas-on-Windows.html#Building-latest-Marsyas-on-Windows" accesskey="p" rel="prev">Building latest Marsyas on Windows</a>, Up: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="u" rel="up">Step-by-step building instructions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

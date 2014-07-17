@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Configuring with CMake</title>
+
+<meta name="description" content="Marsyas User Manual: Configuring with CMake">
+<meta name="keywords" content="Marsyas User Manual: Configuring with CMake">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Source-installation.html#Source-installation" rel="up" title="Source installation">
+<link href="Post_002dinstall-setup.html#Post_002dinstall-setup" rel="next" title="Post-install setup">
+<link href="MacOS-X-additional-notes.html#MacOS-X-additional-notes" rel="prev" title="MacOS X additional notes">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Configuring-with-CMake"></a>
+<div class="header">
+<p>
+Next: <a href="Post_002dinstall-setup.html#Post_002dinstall-setup" accesskey="n" rel="next">Post-install setup</a>, Previous: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="p" rel="prev">Step-by-step building instructions</a>, Up: <a href="Source-installation.html#Source-installation" accesskey="u" rel="up">Source installation</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Configuring-with-CMake-1"></a>
+<h3 class="section">2.3 Configuring with CMake</h3>
+
+<p>Marsyas uses CMake to configure and guide its building process. CMake allows
+for automatic configuration according to the current platform, as well as
+user-configurable building options. It allows you to enable and disable
+specific Marsyas features.
+</p>
+<p>After configuration, CMake creates files that contain instructions for the
+next step of the building process. This may be:
+</p><ul>
+<li> Makefiles on Linux, Mac OS X or MinGW
+</li><li> Xcode projects on Mac OS X
+</li><li> MS Visual Studio solutions on Windows.
+</li></ul>
+
+<a name="Running-CMake"></a>
+<h4 class="subsection">2.3.1 Running CMake</h4>
+
+<p><strong>Note:</strong> The following instructions assume that you have done the
+prerequisite steps described in <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions">Step-by-step building instructions</a>:
+</p><ol>
+<li> Obtained Marsyas sources
+</li><li> Installed CMake and other prerequisite software
+</li><li> Created a <code>build</code> directory within the top-level Marsyas
+directory and navigated your command-line to the <code>build</code> directory
+</li></ol>
+
+<p>There are several ways that configuration using CMake can be performed.
+</p>
+<a name="Using-CMake-GUI"></a>
+<h4 class="subsubsection">2.3.1.1 Using CMake GUI</h4>
+
+<p><strong>Note:</strong> On Linux, you will need to install an extra package for the
+CMake GUI. On Debian/Ubuntu the package name is <code>cmake-qt-gui</code>.
+</p>
+<p>You can start CMake GUI either graphically via the list of
+applications installed on your system, or by using the &rsquo;cmake-gui&rsquo; command
+in the Linux console, OS X Terminal, or Windows Command Prompt.
+</p>
+<ul>
+<li> If you start it the graphical way, you will need to set the Marsyas
+source and build directories manually in the CMake GUI
+
+</li><li> If you start it using the &rsquo;cmake-gui&rsquo; command, you can pass it the
+Marsyas source directory as argument, and the current directory will
+be used as the build directory. For example, assuming that you are in the
+<code>build</code> directory:
+
+<div class="example">
+<pre class="example">cmake-gui ..
+</pre></div>
+
+</li></ul>
+
+<p>CMake GUI contains a list of available options: the left column lists option
+names, and the right column their editable values. By moving the mouse cursor
+over an option name, its description will pop up. To perform configuration,
+follow the steps below:
+</p>
+<ol>
+<li> If Marsyas has not been configured before, the list of options will be
+empty. Click &quot;Configure&quot; to do the initial auto-configuration.
+
+</li><li> Modify options as desired, and click &quot;Configure&quot; again.
+
+</li><li> Once you are satisfied with options, click &quot;Generate&quot; to apply them.
+
+</li><li> You can now exit CMake GUI and proceed with the compilation step of
+the building process (see <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions">Step-by-step building instructions</a>).
+
+</li></ol>
+
+
+<a name="Entirely-on-command_002dline"></a>
+<h4 class="subsubsection">2.3.1.2 Entirely on command-line</h4>
+
+<p>You can also perform CMake configuration entirely on command-line.
+Options are controlled by using the &rsquo;cmake&rsquo; command and passing it arguments
+of the form &quot;-D&quot; + [option name] + &quot;=&quot; + [value]. Values can be paths to
+directories and files, or simply &quot;ON&quot; and &quot;OFF&quot; (or equivalently,
+&quot;TRUE&quot; and &quot;FALSE&quot;). Multiple options can be changed using the same command.
+</p>
+<p>For example, assuming that you are in the <code>build</code> directory:
+</p>
+<div class="example">
+<pre class="example">cmake -DMARSYAS_AUDIOIO=OFF -DMARSYAS_TESTS=ON ..
+</pre></div>
+
+<p>After invoking the <code>cmake</code> command one or multiple times to apply desired
+options, you can proceed with the compilation step of the building process
+(see <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions">Step-by-step building instructions</a>)
+</p>
+
+<a name="More-alternatives"></a>
+<h4 class="subsubsection">2.3.1.3 More alternatives</h4>
+
+<p>There are more alternative ways to use CMake. Please read detailed instructions
+on the CMake website:
+</p><ul>
+<li> <a href="http://www.cmake.org/cmake/help/runningcmake.html">General instructions</a>
+</li><li> <a href="http://www.cmake.org/cmake/help/v2.8.11/cmake.html#section_Usage">Command-line usage</a>
+</li></ul>
+
+
+<a name="Most-prominent-options"></a>
+<h4 class="subsection">2.3.2 Most prominent options</h4>
+
+<p>The following is a list of most important and commonly used options provided
+either by Marsyas or CMake itself.
+</p>
+
+<a name="Input-_002f-output"></a>
+<h4 class="subsubsection">2.3.2.1 Input / output</h4>
+
+<dl compact="compact">
+<dt><code>MARSYAS_AUDIOIO</code></dt>
+<dd><p>This enables audio input/output.  Requires DirectX on Windows and
+either JACK, ALSA or OSS on Linux.  MacOS X audio support is built-in
+with the basic developer tools.
+</p>
+<p><strong>Note:</strong> This option requires C++11 support - in other words,
+the WITH_CPP11 option must also be enabled (described below).
+</p>
+</dd>
+<dt><code>MARSYAS_MIDIIO</code></dt>
+<dd><p>This enables midi input/output.  Requires DirectX on Windows and
+either ALSA or OSS on Linux.  MacOS X audio support is built-in
+with the basic developer tools.
+</p>
+</dd>
+</dl>
+
+<p><strong>Note:</strong> Audio and MIDI IO support also depend on WITH_JACK, WITH_ALSA,
+and WITH_OSS options, described below.
+</p>
+
+<a name="Code-messages-and-optional-portions"></a>
+<h4 class="subsubsection">2.3.2.2 Code messages and optional portions</h4>
+
+<dl compact="compact">
+<dt><code>MARSYAS_ASSERT</code></dt>
+<dd><p>Turns on assertions.
+</p>
+</dd>
+<dt><code>MARSYAS_PROFILING</code></dt>
+<dd><p>Turns on profiling.
+</p>
+</dd>
+<dt><code>MARSYAS_DEBUG</code></dt>
+<dd><p>Turns on debugging info (large performance penalty).
+</p>
+</dd>
+<dt><code>DISTRIBUTED</code></dt>
+<dd><p>(<em>advanced</em> option) experimental code for distributed
+systems.
+</p>
+</dd>
+</dl>
+
+
+<a name="Message-logging"></a>
+<h4 class="subsubsection">2.3.2.3 Message logging</h4>
+
+<p>These are <em>advanced</em> options.
+</p>
+<dl compact="compact">
+<dt><code>MARSYAS_LOG_WARNINGS</code></dt>
+<dt><code>MARSYAS_LOG_DEBUGS</code></dt>
+<dt><code>MARSYAS_LOG_DIAGNOSTICS</code></dt>
+<dt><code>MARSYAS_LOG2FILE</code></dt>
+<dt><code>MARSYAS_LOG2STDOUT</code></dt>
+<dt><code>MARSYAS_LOG2GUI</code></dt>
+</dl>
+
+
+<a name="Testing"></a>
+<h4 class="subsubsection">2.3.2.4 Testing</h4>
+
+<dl compact="compact">
+<dt><code>MARSYAS_TESTS</code></dt>
+<dd><p>Build Marsyas tests, so they can be run using <code>make test</code>.
+</p></dd>
+</dl>
+
+
+<a name="Optional-software"></a>
+<h4 class="subsubsection">2.3.2.5 Optional software</h4>
+
+<p>All of these options require additional software to be
+<strong>installed and properly configured</strong>.
+</p>
+<dl compact="compact">
+<dt><code>WITH_CPP11</code></dt>
+<dd><p>Enables compilation in C++11 mode. If disabled, Marsyas will be compiled with
+limited functionality. Specifically, the audio IO and multi-threading support
+require this option to be enabled.
+</p>
+<p>This option requires a compiler with adequate C++11 support.
+Minimum required compiler versions are ensured by CMake, and reported if not
+satisfied.
+</p>
+</dd>
+<dt><code>WITH_MAD</code></dt>
+<dd><p>mp3 audio decoding with
+<a href="http://sourceforge.net/projects/mad/">LibMAD</a>
+</p>
+</dd>
+<dt><code>WITH_VORBIS</code></dt>
+<dd><p>ogg vorbis audio decoding with libvorbis - it requires
+</p>
+</dd>
+<dt><code>WITH_MATLAB</code></dt>
+<dd><p>Builds the MATLAB engine interface.
+</p>
+</dd>
+<dt><code>WITH_SWIG</code></dt>
+<dd><p>Builds SWIG bindings.  This option enables the following
+sub-options: WITH_SWIG_PYTHON, WITH_SWIG_JAVA, WITH_SWIG_LUA, and
+WITH_SWIG_RUBY.
+</p><dl compact="compact">
+<dt><code>WITH_SWIG_PYTHON</code></dt>
+<dd><p>Use Swig to generate Python bindings
+</p></dd>
+<dt><code>WITH_SWIG_JAVA</code></dt>
+<dd><p>Use Swig to generate Java bindings
+</p></dd>
+<dt><code>WITH_SWIG_LUA</code></dt>
+<dd><p>Use Swig to generate Lua bindings
+</p></dd>
+<dt><code>WITH_SWIG_RUBY</code></dt>
+<dd><p>Use Swig to generate Ruby bindings
+</p></dd>
+</dl>
+
+
+</dd>
+<dt><code>WITH_QT5</code></dt>
+<dd><p>Builds the Qt5 GUI applications. Most Marsyas GUI applications are of this type.
+Requires Qt 5.0 or higher.
+</p>
+</dd>
+<dt><code>WITH_QT</code></dt>
+<dd><p>Builds the Qt4 GUI applications. There are only a few unmaintained Marsyas GUI
+applications of this type, preserved mostly for inspiration.
+Requires Qt 4.2.3 or higher.
+</p>
+
+</dd>
+<dt><code>WITH_VAMP</code></dt>
+<dd><p>Build plugins for Vamp (see <a href="SonicVisualiser-Vamp-Plugins.html#SonicVisualiser-Vamp-Plugins">SonicVisualiser Vamp Plugins</a> for more information).
+</p>
+</dd>
+<dt><code>WITH_GSTREAMER</code></dt>
+<dd><p>Use GStreamer as an audio source
+</p>
+</dd>
+</dl>
+
+<p>Linux-specific:
+</p>
+<dl compact="compact">
+<dt><code>WITH_JACK</code></dt>
+<dd><p>Enables audio IO using JACK, if available.
+</p></dd>
+<dt><code>WITH_ALSA</code></dt>
+<dd><p>Enables audio and MIDI IO using ALSA, if available.
+</p></dd>
+<dt><code>WITH_OSS</code></dt>
+<dd><p>Enables audio and MIDI IO using OSS, if available.
+</p></dd>
+</dl>
+
+
+<a name="Documentation"></a>
+<h4 class="subsubsection">2.3.2.6 Documentation</h4>
+
+<dl compact="compact">
+<dt><code>MARSYAS_DOCUMENTATION_ONLY</code></dt>
+<dd><p>If enabled, only build documentation, not program sources. This allows to
+build documentation without even the presence of a compiler or any requirements
+related to program code.
+</p>
+</dd>
+</dl>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Post_002dinstall-setup.html#Post_002dinstall-setup" accesskey="n" rel="next">Post-install setup</a>, Previous: <a href="Step_002dby_002dstep-building-instructions.html#Step_002dby_002dstep-building-instructions" accesskey="p" rel="prev">Step-by-step building instructions</a>, Up: <a href="Source-installation.html#Source-installation" accesskey="u" rel="up">Source installation</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

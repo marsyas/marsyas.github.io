@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: ibt</title>
+
+<meta name="description" content="Marsyas User Manual: ibt">
+<meta name="keywords" content="Marsyas User Manual: ibt">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Feature-Extraction.html#Feature-Extraction" rel="up" title="Feature Extraction">
+<link href="Synthesis.html#Synthesis" rel="next" title="Synthesis">
+<link href="bextract.html#bextract" rel="prev" title="bextract">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ibt"></a>
+<div class="header">
+<p>
+Previous: <a href="bextract.html#bextract" accesskey="p" rel="prev">bextract</a>, Up: <a href="Feature-Extraction.html#Feature-Extraction" accesskey="u" rel="up">Feature Extraction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="ibt-1"></a>
+<h4 class="subsection">4.3.3 <code>ibt</code></h4>
+<a name="index-ibt"></a>
+ 
+<p><code>ibt</code> <a name="index-ibt-1"></a>
+&ndash; standing for INESC-Porto Beat Tracker &ndash;
+is a tempo induction and beat tracking system based on a competing 
+multi-agent system that considers parallel hypotheses regarding tempo and beats.
+The algorithm works either in real-time, for on-line systems, 
+and off-line, for MIR-based applications.<br>
+Benchmarks on causal and noncausal versions reveal competitive results, 
+under alternative conditions.<br>
+More technical information can be found in the paper 
+&ldquo;IBT: A Real-Time Tempo and Beat Tracking System&rdquo; 
+published in the International Conference on Music Information Retrieval (ISMIR) 2010.
+Online at: <a href="http://www.inescporto.pt/~fgouyon/docs/OliveiraGouyonMartinsReis_ISMIR2010.pdf">http://www.inescporto.pt/~fgouyon/docs/OliveiraGouyonMartinsReis_ISMIR2010.pdf</a>.<br><br>
+Examples of usage:
+</p>
+<div class="example">
+<pre class="example">1. ibt foo.wav
+2. ibt -a foo.wav
+3. ibt -f foo.wav
+4. ibt -mic
+5. ibt -a -mic
+6. ibt -f -mic
+7. ibt -nc foo.wav
+</pre></div>
+
+<p><strong>1.</strong> This causally processes foo.wav retrieving the processed beat times, in foo.txt,
+and the respective median tempo, in foo_medianTempo.txt.<br>
+<b>NOTE:</b> By default an initial 5secs is used for the phase+tempo induction stage,
+where the system is setup.<br>
+<strong>2.</strong> Identical to <strong>1.</strong> but playing audio with &quot;clicks&quot; on beats.<br>
+<strong>3.</strong> Identical to <strong>1.</strong> but saving a file with the audio + &quot;clicks&quot; on processed beats.<br>
+<strong>4.</strong> This captures audio from microphone inpute and processes beats in real-time.<br>
+The processed beat times and tempo are saved, respectively, in mic.txt and mic_medianTempo.txt.<br>
+<b>NOTE:</b> Although IBT makes an effort to be noise robust it is still quite prone to it, so
+a noise-clean environment is adviced for using the mode of operation.<br>
+<strong>5.</strong> Identical to <strong>4</strong>. but playing &quot;clicks&quot; on processed beats.<br>
+<strong>6.</strong> Identical to <strong>4</strong>. but saving a file with the captured audio + &quot;clicks&quot; on processed beats.<br>
+<strong>7.</strong> This processes foo.wav non-causally (off-line mode), retrieving the the processed 
+beat times, in foo.txt, and the respective median tempo, in foo_medianTempo.txt.<br>
+<b>NOTE:</b> this mode of operation working off-line provides better performance than 1., ideal
+to MIR-based applications.
+</p>
+<dl compact="compact">
+<dt>&lsquo;<samp>-mic --microphone_input</samp>&rsquo;</dt>
+<dd><p>input sound via microphone interface.
+</p></dd>
+<dt>&lsquo;<samp>-nc --non-causal</samp>&rsquo;</dt>
+<dd><p>for running in non-causal mode.
+</p></dd>
+<dt>&lsquo;<samp>-t --induction_time</samp>&rsquo;</dt>
+<dd><p>time (in secs) dispended in the initial induction stage.
+</p></dd>
+<dt>&lsquo;<samp>-o --output</samp>&rsquo;</dt>
+<dd><p>output files (predicted beat times, mean/median tempo):<br>
+&quot;beats&quot;, &quot;medianTempo&quot;, &quot;meanTempo&quot;, &quot;beats+medianTempo&quot;, &quot;beats+meanTempo&quot;, &quot;beats+meanTempo+medianTempo&quot;, &quot;none&quot;.
+</p></dd>
+<dt>&lsquo;<samp>-b --backtrace</samp>&rsquo;</dt>
+<dd><p>after induction backtrace the analysis to the beginning (for causal [default] mode). 	  
+</p></dd>
+<dt>&lsquo;<samp>-di --dumb_induction</samp>&rsquo;</dt>
+<dd><p>for ignoring period induction substituting it by manual defined values.
+</p></dd>
+<dt>&lsquo;<samp>-a --audio</samp>&rsquo;</dt>
+<dd><p>play the original audio mixed with the synthesized beats.
+</p></dd>
+<dt>&lsquo;<samp>-f --audiofile</samp>&rsquo;</dt>
+<dd><p>output the original audio mixed with the synthesized beats (as fileName_beats.*).
+</p></dd>
+<dt>&lsquo;<samp>-s --score_function</samp>&rsquo;</dt>
+<dd><p>heuristics which conducts the beat tracking: &quot;regular&quot; [default], &quot;correlation&quot;, &quot;squareCorr&quot;.
+</p></dd>
+<dt>&lsquo;<samp>-m --metrical_time</samp>&rsquo;</dt>
+<dd><p>initial time (in secs) which allows tracking metrical changes (0 not allowing at all; -1 for the whole music [default]).
+</p></dd>
+<dt>&lsquo;<samp>-l --log_file</samp>&rsquo;</dt>
+<dd><p>generate log file of the analysis.
+</p></dd>
+<dt>&lsquo;<samp>-2b --givefirst2beats</samp>&rsquo;</dt>
+<dd><p>replace induction stage with ground-truth 
+(two first beats from beatTimes file - .txt or .beats - from the directory or file given as argument).
+</p></dd>
+<dt>&lsquo;<samp>-2bs --givefirst2beats_startpoint</samp>&rsquo;</dt>
+<dd><p>equal to givefirst2beats mode but starting tracking at the first given beat time.
+</p></dd>
+<dt>&lsquo;<samp>-1b --givefirst1beat</samp>&rsquo;</dt>
+<dd><p>replace initial phase by the given ground-truth first beat 
+(from beatTimes file - .txt or .beats - from the directory or file given as argument).
+</p></dd>
+<dt>&lsquo;<samp>-1bs --givefirst1beat_startpoint</samp>&rsquo;</dt>
+<dd><p>equal to givefirst1beat mode but start tracking at the given phase.
+</p></dd>
+<dt>&lsquo;<samp>-pgt --giveinitperiod</samp>&rsquo;</dt>
+<dd><p>replace initial period given by the ibi of the ground-truth two first beats 
+(from beatTimes file - .txt or .beats - from the directory or file given as argument).
+</p></dd>
+<dt>&lsquo;<samp>-pgt_mr --giveinitperiod+metricalrel</samp>&rsquo;</dt>
+<dd><p>equal to giveinitperiod but complementing it with metrically related tempi (2x, 1/2x, 3x, 1/3x).
+</p></dd>
+<dt>&lsquo;<samp>-pgt_nr --giveinitperiod+nonrel</samp>&rsquo;</dt>
+<dd><p>equal to giveinitperiod but complementing it with non-related tempi.
+</p>	  
+</dd>
+</dl>
+
+
+
+<hr>
+<div class="header">
+<p>
+Previous: <a href="bextract.html#bextract" accesskey="p" rel="prev">bextract</a>, Up: <a href="Feature-Extraction.html#Feature-Extraction" accesskey="u" rel="up">Feature Extraction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

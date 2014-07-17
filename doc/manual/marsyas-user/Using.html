@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: Using</title>
+
+<meta name="description" content="Marsyas User Manual: Using">
+<meta name="keywords" content="Marsyas User Manual: Using">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Marsyas-Expression-Syntax.html#Marsyas-Expression-Syntax" rel="up" title="Marsyas Expression Syntax">
+<link href="Extending.html#Extending" rel="next" title="Extending">
+<link href="Function-Libraries.html#Function-Libraries" rel="prev" title="Function Libraries">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Using"></a>
+<div class="header">
+<p>
+Next: <a href="Extending.html#Extending" accesskey="n" rel="next">Extending</a>, Previous: <a href="Function-Libraries.html#Function-Libraries" accesskey="p" rel="prev">Function Libraries</a>, Up: <a href="Marsyas-Expression-Syntax.html#Marsyas-Expression-Syntax" accesskey="u" rel="up">Marsyas Expression Syntax</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="Using-1"></a>
+<h4 class="subsubsection">9.6.4.11 Using</h4>
+
+<p>Two examples show simple usage. These examples are in src/scheduler.cpp.
+</p>
+<p>There are a few ways to specify an expression to be parsed.
+</p><ul>
+<li> <b>new</b> EvExpr(marsym, Ex(<i>&quot;x &lt;&lt; 3&quot;</i>,<i>&quot;&rsquo;hello&rsquo; + x &gt;&gt; Stream.opn&quot;</i>),Rp(<i>&quot;false&quot;</i>));<br>
+      specifies a primary expression within the Ex constructor that is
+      to be executed on every repetition of the event. Values to be used
+      in the expression may be initialised in the first string, then
+      used in the second string. The first string is evaluated as soon
+      as the expression event is posted on some timer. The second string
+      is executed on each repetition. The init string is optional within
+      the Ex constructor (in fact the Rp exprsession may also have an
+      init expression though it can be combined with the ExInit
+      expression). However the expression inside the Rp Constructor
+      specifies a repeat expression that determines if the event is to
+      be repeated. This expression must have a type boolean.
+</li><li> <b>new</b> EvExpr(marsym, ExFile(<i>&quot;filename.expr&quot;</i>));<br>
+      the expressions for Ex and Rp can be read in from a file. This
+      eliminates the need to recompile each time an expression needs to
+      be adjusted. The file format is text where the lines expected by
+      Ex and Rp are separated by titles:
+  <ul>
+<li> #ExInit: - specify an init variables expression.
+  </li><li> #ExExpr: - specify the expression to be repeated.
+  </li><li> #RpInit: - specify an init variables expression for the repeated expression. The repeat expression may share variables with the primary Ex expression so anything specified here can be specified in #ExInit:
+  </li><li> #RpExpr: - specify a boolean expression that determines if the expression event is to be repeated after each repetition. This expression is evaluated after the primary expression.
+  </li><li> #RpRate: - (Not implemented yet, pending) specify an expression that evalutes to a mrs_string that determines how far into the future the event is to be posted after it is evaluated. The result must have meaning in the current timer timebase.
+  </li></ul>
+</li></ul>
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="Extending.html#Extending" accesskey="n" rel="next">Extending</a>, Previous: <a href="Function-Libraries.html#Function-Libraries" accesskey="p" rel="prev">Function Libraries</a>, Up: <a href="Marsyas-Expression-Syntax.html#Marsyas-Expression-Syntax" accesskey="u" rel="up">Marsyas Expression Syntax</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>

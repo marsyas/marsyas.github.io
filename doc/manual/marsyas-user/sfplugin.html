@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Copyright 1998-2006 George Tzanetakis 
+
+Permission is granted to make and distribute verbatim
+copies of this manual provided the copyright notice and
+this permission notice are preserved on all copies.
+
+Permission is granted to copy and distribute modified
+versions of this manual under the conditions for
+verbatim copying, provided also that the sections
+entitled "Copying" and "GNU General Public License"
+are included exactly as in the original, and provided
+that the entire resulting derived work is distributed
+under the terms of a permission notice identical to this
+one.
+
+Permission is granted to copy and distribute
+translations of this manual into another language,
+under the above conditions for modified versions,
+except that this permission notice may be stated in a
+translation approved by the Free Software Foundation. -->
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>Marsyas User Manual: sfplugin</title>
+
+<meta name="description" content="Marsyas User Manual: sfplugin">
+<meta name="keywords" content="Marsyas User Manual: sfplugin">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Missing-Docs.html#Missing-Docs" rel="index" title="Missing Docs">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Marsystem-Interaction.html#Marsystem-Interaction" rel="up" title="Marsystem Interaction">
+<link href="msl.html#msl" rel="next" title="msl">
+<link href="Marsystem-Interaction.html#Marsystem-Interaction" rel="prev" title="Marsystem Interaction">
+<style type="text/css">
+<!--
+
+
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+body {
+	font-family: Helvetica, sans-serif; font-weight: normal;
+ background-color: #fff;
+ margin: 10px;
+ line-height: 1.1em;
+}
+/* begin custom Marsyas css file.  Please leave "body" above this line,
+ * because otherwise this comment won't show up.  (?) */
+h3 { color: purple; }
+h4 { color: darkblue; }
+h5 { color: darkgreen; }
+hr { border: 0; color: green; background-color: green; }
+strong { color: red; }
+table.cartouche { color: red; }
+strong.float-caption {color:black;font-size:small;margin-top:0px;}
+h3.fn,span.fn
+{
+  margin-left: 1cm;
+  text-indent: -1cm;
+}
+
+a:link
+{
+  text-decoration: none
+}
+
+a:visited
+{
+  text-decoration: none
+}
+
+td.postheader
+{
+  font-family: sans-serif
+}
+
+tr.address
+{
+  font-family: sans-serif
+}
+
+table tr.odd {
+  background: #f0f0f0;
+}
+
+table tr.even {
+  background: #e4e4e4;
+}
+
+table.annotated th {
+  padding: 3px;
+  text-align: left
+}
+
+table.annotated td {
+  padding: 3px;
+}
+
+table tr pre
+{
+  padding-top: none;
+  padding-bottom: none;
+  padding-left: none;
+  padding-right: none;
+  border: none;
+  background: none
+}
+
+tr.qt-style
+{
+  background: #a2c511;
+}
+
+body pre
+{
+  padding: 0.2em;
+  border: #e7e7e7 1px solid;
+  background: #f1f1f1;
+}
+
+span.preprocessor, span.preprocessor a
+{
+  color: darkblue;
+}
+
+span.comment
+{
+  color: darkred;
+  font-style: italic
+}
+
+span.string,span.char
+{
+  color: darkgreen;
+}
+
+.subtitle
+{
+    font-size: 0.8em
+}
+
+.small-subtitle
+{
+    font-size: 0.65em
+}
+
+/* end custom marsyas.css */
+
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="sfplugin"></a>
+<div class="header">
+<p>
+Next: <a href="msl.html#msl" accesskey="n" rel="next">msl</a>, Previous: <a href="Marsystem-Interaction.html#Marsystem-Interaction" accesskey="p" rel="prev">Marsystem Interaction</a>, Up: <a href="Marsystem-Interaction.html#Marsystem-Interaction" accesskey="u" rel="up">Marsystem Interaction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="sfplugin-1"></a>
+<h4 class="subsection">4.7.1 <code>sfplugin</code></h4>
+<a name="index-sfplugin"></a>
+
+<p>sfplugin is the universal executable. Any network of Marsystems 
+stored as a plugin can be loaded at run-time and sound can flow 
+through the network. The following example with appropriate plugins 
+will peform playback of foo.wav and playback with real time music
+speech classification of foo.wav. 
+</p>
+<div class="example">
+<pre class="example">sfplugin -p plugins/playback.mpl foo.wav
+sfplugin -p musp_classify.mpl foo.wav
+</pre></div>
+
+
+<p>Writing a basic sfplugin plugin
+</p>
+<p>The sfplugin application expects that certain controls are available 
+in any network it tries to handle. Therefore, one of the simplest 
+demonstration plugins one can write is a plugin containing 
+a SoundFileSource and an AudioSink, demonstrated below. 
+As the sfplugin does not know were the sources and sinks are in the network
+it is necessary to link the composite&rsquo;s controls with appropriate controls 
+in the network. 
+</p>
+<div class="example">
+<pre class="example">// create the network that will become the plugin
+MarSystem* sys = mng.create( &quot;Series&quot;, &quot;head&quot; );
+
+// create the two required MarSystems
+sys-&gt;addMarSystem( mng.create( &quot;SoundFileSource&quot;, &quot;src&quot; ) );
+sys-&gt;addMarSystem( mng.create( &quot;AudioSink&quot;, &quot;dest&quot; ) );
+
+// while we don't actually want to play a file now, supply a valid
+// filler name to keep the program happy; sfplugin will update it later
+sys-&gt;updctrl( &quot;SoundFileSource/src/mrs_string/filename&quot;,
+	      &quot;../../SuperGroovyLateralGeniculateNucleus.au&quot; );
+
+// since we're not playing the song now, set initAudio to false;
+// sfplugin will update this to true when the network is executed there
+sys-&gt;updctrl( &quot;AudioSink/dest/mrs_bool/initAudio&quot;, false );
+
+// set those pesky control links!
+sys-&gt;linkctrl( &quot;mrs_string/filename&quot;, &quot;SoundFileSource/src/mrs_string/filename&quot; );
+sys-&gt;linkctrl( &quot;mrs_bool/initAudio&quot; , &quot;AudioSink/dest/mrs_bool/initAudio&quot; );
+sys-&gt;linkctrl( &quot;mrs_natural/pos&quot;    , &quot;SoundFileSource/src/mrs_natural/pos&quot; );
+sys-&gt;linkctrl( &quot;mrs_bool/hasData&quot;  , &quot;SoundFileSource/src/mrs_bool/hasData&quot; );
+
+// finally, write the network to a file; the plugin can be run as
+// follows: sfplugin -p some_plugin.mpl ../../SamsSavorySuperiorColliculus.au
+ofstream ofs( &quot;some_plugin.mpl&quot; );
+ofs &lt;&lt; (*sys) &lt;&lt; endl;
+</pre></div>
+
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="msl.html#msl" accesskey="n" rel="next">msl</a>, Previous: <a href="Marsystem-Interaction.html#Marsystem-Interaction" accesskey="p" rel="prev">Marsystem Interaction</a>, Up: <a href="Marsystem-Interaction.html#Marsystem-Interaction" accesskey="u" rel="up">Marsystem Interaction</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Missing-Docs.html#Missing-Docs" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>
